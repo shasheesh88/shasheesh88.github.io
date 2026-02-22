@@ -16,7 +16,7 @@ I will keep updating this over time.
 
 (Add your photos below)
 
-![Photo](/images/photo1.jpg)
+![My Photo](/images/decision_tree_plot.png)
 ![Photo](/images/photo2.jpg)
 
 ---
