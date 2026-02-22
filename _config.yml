@@ -1,0 +1,18 @@
+title: "Shasheesh"
+name: "Shasheesh"
+description: "My journey, ideas and life"
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+plugins:
+  - jekyll-include-cache
+
+author:
+  name: "Shasheesh"
+  bio: "Explorer of life"
+  location: "Earth"
+
+minimal_mistakes_skin: "default"
+
+markdown: kramdown
+permalink: /:categories/:title/
