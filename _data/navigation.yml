@@ -1,0 +1,15 @@
+main:
+  - title: "About"
+    url: /about/
+
+  - title: "Career"
+    url: /career/
+
+  - title: "Philosophy"
+    url: /philosophy/
+
+  - title: "Blog"
+    url: /blog/
+
+  - title: "Gallery"
+    url: /gallery/
