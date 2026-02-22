@@ -3,6 +3,11 @@ layout: home
 title: "Welcome"
 author_profile: true
 ---
+<script>
+if(sessionStorage.getItem("auth") !== "yes"){
+   window.location.href = "/password.html";
+}
+</script>
 
 Welcome to my personal website.
 
