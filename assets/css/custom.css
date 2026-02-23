@@ -1,0 +1,25 @@
+.page__content {
+  max-width: 980px;
+}
+
+.page__content p {
+  margin-bottom: 1rem;
+}
+
+.page__content h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.page__content h3 {
+  margin-top: 1.4rem;
+}
+
+.page__content {
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+.page__title {
+  margin-top: 0.5rem;
+}
