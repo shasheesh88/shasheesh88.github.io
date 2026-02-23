@@ -99,3 +99,65 @@
   font-size: 0.9rem;
   color: #666;
 }
+
+/* ===================================== */
+/* Career Page Layout Improvements */
+/* ===================================== */
+
+/* Top Professional Direction + Contact */
+.career-intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.career-contact {
+  background: #fafafa;
+  padding: 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Education section */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 1.5rem;
+}
+
+.education-item {
+  background: #fafafa;
+  padding: 1.6rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Skills section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 1.5rem;
+}
+
+.skills-grid > div {
+  background: #fafafa;
+  padding: 1.4rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Project section spacing */
+.project-section {
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+  .career-intro {
+    grid-template-columns: 1fr;
+  }
+}
