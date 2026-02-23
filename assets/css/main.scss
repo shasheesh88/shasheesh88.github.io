@@ -6,8 +6,15 @@
 /* Layout width */
 .page__content {
   max-width: 980px;
-  line-height: 1.65;
+  line-height: 1.7;
   font-size: 17px;
+}
+
+/* Slightly improve readability on very large screens */
+@media (min-width: 1200px) {
+  .page__content {
+    font-size: 18px;
+  }
 }
 
 /* Paragraph spacing */
@@ -17,34 +24,50 @@
 
 /* Section headings */
 .page__content h2 {
-  margin-top: 2.2rem;
-  margin-bottom: 0.7rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
 
-/* Sub headings */
+/* Sub headings (Projects, etc.) */
 .page__content h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
+}
+
+/* Improve bold blocks (Education institutions) */
+.page__content strong {
+  display: block;
+  margin-top: 1.6rem;
+  font-size: 1.05rem;
 }
 
 /* Page title spacing */
 .page__title {
   margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
 /* Lists */
 .page__content ul,
 .page__content ol {
+  margin-top: 0.5rem;
   margin-bottom: 1.2rem;
+}
+
+.page__content li {
+  margin-bottom: 0.45rem;
 }
 
 /* Horizontal rule spacing */
 .page__content hr {
-  margin: 2rem 0;
+  margin: 2.2rem 0;
 }
+
+/* ============================= */
+/* Gallery Grid Layout */
+/* ============================= */
 
 .gallery-grid {
   display: grid;
@@ -53,9 +76,10 @@
   margin-left: auto;
   margin-right: auto;
   gap: 28px;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 2.5rem;
 }
+
 /* Individual Gallery Item */
 .gallery-item {
   text-align: center;
@@ -66,11 +90,12 @@
   width: 100%;
   height: 320px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /* Caption Styling */
 .gallery-item p {
-  margin-top: 0.6rem;
+  margin-top: 0.7rem;
   font-size: 0.9rem;
+  color: #666;
 }
