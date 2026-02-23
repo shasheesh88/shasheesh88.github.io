@@ -46,15 +46,16 @@
   margin: 2rem 0;
 }
 
-/* Gallery Grid Layout */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   gap: 28px;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
-
 /* Individual Gallery Item */
 .gallery-item {
   text-align: center;
