@@ -5,15 +5,26 @@ permalink: /career/
 author_profile: false
 ---
 
-## Professional Direction
+<div class="career-intro">
 
-With a background in maths and analytics, and an interest in solving problems with data, I use data science, AI/ML, and cloud platforms to design and build scalable and ethical intelligent systems that create sustainable and meaningful impact.
+  <div class="career-summary">
+    <h2>Professional Direction</h2>
+    <p>
+      With a background in maths and analytics, and an interest in solving problems with data, I use data science, AI/ML, and cloud platforms to design and build scalable and ethical intelligent systems that create sustainable and meaningful impact.
+    </p>
+  </div>
 
-Contact:  
-eshwaranchittaluri123@gmail.com  
-shasheesh88@yahoo.com
+  <div class="career-contact">
+    <h3>Contact</h3>
+    <p>
+      eshwaranchittaluri123@gmail.com<br>
+      shasheesh88@yahoo.com
+    </p>
+  </div>
 
----
+</div>
+
+<hr>
 
 ## Personal Note  *(optional — edit later)*
 
@@ -26,47 +37,75 @@ What motivates me most is building systems that not only work technically, but a
 
 ## Education
 
-**National Institute of Technology Karnataka (NITK), Surathkal**  
-MBA — Analytics & AI  
-Specialization: ML & AI Systems  
-Grade: ≈ 8.5  
-2022–2024
+<div class="education-grid">
 
-**Indian Institute of Science Education and Research (IISER), Trivandrum**  
-BS–MS — Computational Materials Science  
-Focus: Molecular Modeling & Quantum Simulations  
-Overall Grade: ≈ 7.0  
-Masters Grade: 8.10  
-2017–2022
+  <div class="education-item">
+    <strong>National Institute of Technology Karnataka (NITK), Surathkal</strong><br>
+    MBA — Analytics & AI<br>
+    Specialization: ML & AI Systems<br>
+    Grade: ≈ 8.5<br>
+    2022–2024
+  </div>
+
+  <div class="education-item">
+    <strong>Indian Institute of Science Education and Research (IISER), Trivandrum</strong><br>
+    BS–MS — Computational Materials Science<br>
+    Focus: Molecular Modeling & Quantum Simulations<br>
+    Overall Grade: ≈ 7.0<br>
+    Masters Grade: 8.10<br>
+    2017–2022
+  </div>
+
+</div>
 
 ---
 
 ## Skills
 
-**Data Science Tools**  
-Pandas, NumPy, SciPy, TensorFlow, PyTorch, XGBoost, Keras, Scikit-Learn, Transformers, SpaCy, Hugging Face, Apache Airflow, MLflow, Scrapy, Requests, Missingno, PuLP, DateTime, Regex, Vertex AI ADK
+<div class="skills-grid">
 
-**Machine Learning**  
-Machine Learning, Deep Learning, Supervised Learning, Optimization, Unsupervised Learning, NLP, Computer Vision, Generative AI, LLMs, Agent Frameworks, MLOps, Hyperparameter Tuning, RAG, RLHF
+  <div>
+    <strong>Data Science Tools</strong><br>
+    Pandas, NumPy, SciPy, TensorFlow, PyTorch, XGBoost, Keras, Scikit-Learn, Transformers, SpaCy, Hugging Face, Apache Airflow, MLflow, Scrapy, Requests, Missingno, PuLP, DateTime, Regex, Vertex AI ADK
+  </div>
 
-**Languages & Tools**  
-Python, SQL, Bash, gcloud CLI, MySQL, Windows, WSL
+  <div>
+    <strong>Machine Learning</strong><br>
+    Machine Learning, Deep Learning, Supervised Learning, Optimization, Unsupervised Learning, NLP, Computer Vision, Generative AI, LLMs, Agent Frameworks, MLOps, Hyperparameter Tuning, RAG, RLHF
+  </div>
 
-**Databases & Cloud**  
-PostgreSQL, MySQL, Data Warehousing, BigQuery, Cloud Run, Artifact Registry, Cloud Storage, Logging & Monitoring, Serverless Deployment, IAM Security, ETL/ELT Workflows, Data Interpretation, Cloud-agnostic architecture (GCP → AWS/Azure transferable)
+  <div>
+    <strong>Languages & Tools</strong><br>
+    Python, SQL, Bash, gcloud CLI, MySQL, Windows, WSL
+  </div>
 
-**Visualization**  
-Tableau, Matplotlib, Seaborn
+  <div>
+    <strong>Databases & Cloud</strong><br>
+    PostgreSQL, MySQL, Data Warehousing, BigQuery, Cloud Run, Artifact Registry, Cloud Storage, Logging & Monitoring, Serverless Deployment, IAM Security, ETL/ELT Workflows, Data Interpretation, Cloud-agnostic architecture (GCP → AWS/Azure transferable)
+  </div>
 
-**Other Skills**  
-Alteryx Designer, HPC Clusters, MS Office Suite, Statistical Analysis, Problem Solving, Analytical Thinking, Data Storytelling
+  <div>
+    <strong>Visualization</strong><br>
+    Tableau, Matplotlib, Seaborn
+  </div>
 
-**Soft Skills**  
-Communication, Insight Synthesis, Collaboration, Presentation Skills
+  <div>
+    <strong>Other Skills</strong><br>
+    Alteryx Designer, HPC Clusters, MS Office Suite, Statistical Analysis, Problem Solving, Analytical Thinking, Data Storytelling
+  </div>
+
+  <div>
+    <strong>Soft Skills</strong><br>
+    Communication, Insight Synthesis, Collaboration, Presentation Skills
+  </div>
+
+</div>
 
 ---
 
 ## Work Experience & Projects
+
+<div class="project-section">
 
 ### Generative AI-Based Telematics Insights Agent  
 **myTVS (TVS & Sons) — 2025–Present**
@@ -139,6 +178,8 @@ Applied Monte Carlo simulations and density functional calculations for mechanis
 
 **Insight gained:**  
 [Add reflection later.]
+
+</div>
 
 ---
 
