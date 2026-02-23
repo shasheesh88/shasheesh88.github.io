@@ -16,3 +16,6 @@ minimal_mistakes_skin: "default"
 
 markdown: kramdown
 permalink: /:categories/:title/
+
+sass:
+  style: compressed
