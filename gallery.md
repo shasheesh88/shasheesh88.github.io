@@ -6,37 +6,41 @@ permalink: /gallery/
 
 ## Visual Archive
 
-This page is a collection of moments I chose to keep.
+This page is a collection of moments and influences I chose to keep.
 
-Not every moment is photographed.  
-Only the ones that felt worth remembering.
+Not every influence in life is a photograph.  
+Some are people. Some are ideas. Some are quiet reminders.
 
-Over time, this gallery will become a visual timeline of my life, experiences, and observations.
-
----
-
-## Life Moments
-
-These are snapshots from different points in my journey — moments that meant something beyond the instant they were captured.
-
-![Decision Tree Visualization](/images/decision_tree_plot.png)
-*One of my early visual explorations of structured thinking through data.*
-
-![Memory](/images/photo2.jpg)
-*Caption coming soon.*
+Over time, this gallery will become a visual reflection of who shaped my thinking and what continues to guide me.
 
 ---
 
-## Travel & Places
+## Inspirations
 
-Places often change how we think more than how we move.  
-These images represent locations that left an impression on me.
+These are individuals who have deeply influenced the way I think, act, and aspire to grow.  
+Their lives represent values I respect and principles I try to follow.
 
-![Travel Memory](/images/travel1.jpg)
-*Where this was taken — what it meant — what I learned.*
+![A.P.J. Abdul Kalam](/images/kalam_sir.jpeg)
+*Inspiration through humility, knowledge, and dedication to learning.*
 
-![Travel Memory](/images/travel2.jpg)
-*Story behind this moment.*
+![Abraham Lincoln](/images/lincoln.jpeg)
+*Leadership rooted in integrity, resilience, and moral courage.*
+
+![Ammamma](/images/ammamma.jpeg)
+*A reminder that strength, sacrifice, and wisdom often begin at home.*
+
+---
+
+## Mindset & Motivation
+
+Growth is not only shaped by people but also by the ideas we repeat to ourselves.  
+These visuals represent reminders I return to when I need clarity or strength.
+
+![Mindfulness Reminder](/images/mindful.jpeg)
+*Stay present. Focus on what can be controlled. Think clearly.*
+
+![Self Talk Reminder](/images/self_talk.jpeg)
+*The way you speak to yourself shapes the direction you move in.*
 
 ---
 
@@ -44,12 +48,13 @@ These images represent locations that left an impression on me.
 
 This gallery will grow gradually over time.
 
-I prefer adding fewer meaningful images rather than many forgettable ones. Each photo here is intended to carry memory, context, or insight.
+I prefer adding fewer meaningful images rather than many forgettable ones.  
+Each image here carries influence, reflection, or a lesson.
 
 ---
 
 ### Note to Future Me
 
-If you're looking at this years from now, these photos are not just images.
+If you're looking at this years from now, these are not just images.
 
-They are reminders of who you were when they were taken.
+They are anchors — reminders of who shaped you and what guided your thinking.
