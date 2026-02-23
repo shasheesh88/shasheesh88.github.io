@@ -105,7 +105,6 @@ What motivates me most is building systems that not only work technically, but a
 
 ## Work Experience & Projects
 
-<div class="project-section">
 
 ### Generative AI-Based Telematics Insights Agent  
 **myTVS (TVS & Sons) — 2025–Present**
@@ -179,7 +178,6 @@ Applied Monte Carlo simulations and density functional calculations for mechanis
 **Insight gained:**  
 [Add reflection later.]
 
-</div>
 
 ---
 
