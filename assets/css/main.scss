@@ -45,3 +45,31 @@
 .page__content hr {
   margin: 2rem 0;
 }
+
+/* Gallery Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual Gallery Item */
+.gallery-item {
+  text-align: center;
+}
+
+/* Image Styling */
+.gallery-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Caption Styling */
+.gallery-item p {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
