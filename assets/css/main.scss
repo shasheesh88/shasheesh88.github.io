@@ -2,4 +2,46 @@
 ---
 
 @import "minimal-mistakes";
-@import "custom";
+
+/* Layout width */
+.page__content {
+  max-width: 980px;
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+/* Paragraph spacing */
+.page__content p {
+  margin-bottom: 1rem;
+}
+
+/* Section headings */
+.page__content h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+/* Sub headings */
+.page__content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+/* Page title spacing */
+.page__title {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Lists */
+.page__content ul,
+.page__content ol {
+  margin-bottom: 1.2rem;
+}
+
+/* Horizontal rule spacing */
+.page__content hr {
+  margin: 2rem 0;
+}
