@@ -1,26 +1,29 @@
 ---
 ---
 
-/* =============================== */
+/* ================================= */
 /* Google Fonts */
-/* =============================== */
+/* ================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@700&display=swap");
 
-/* =============================== */
+/* ================================= */
 /* Theme */
-/* =============================== */
+/* ================================= */
 
 @import "minimal-mistakes";
 
-/* =============================== */
+/* ================================= */
 /* Global Typography */
-/* =============================== */
+/* ================================= */
 
 body,
+.page,
 .page__content,
-.page__inner-wrap {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+.page__inner-wrap,
+.layout--single,
+.layout--wide {
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
 }
 
 /* Headings */
@@ -33,13 +36,17 @@ body,
 .page__inner-wrap h1,
 .page__inner-wrap h2,
 .page__inner-wrap h3,
-.page__inner-wrap h4 {
-  font-family: "Merriweather", serif;
+.page__inner-wrap h4,
+.layout--wide h1,
+.layout--wide h2,
+.layout--wide h3,
+.layout--wide h4 {
+  font-family: "Merriweather", serif !important;
 }
 
-/* =============================== */
+/* ================================= */
 /* Layout width */
-/* =============================== */
+/* ================================= */
 
 .page__content,
 .page__inner-wrap {
@@ -48,18 +55,20 @@ body,
   font-size: 17px;
 }
 
-/* Improve readability on large screens */
+/* Improve readability on very large screens */
 
 @media (min-width: 1200px) {
+
   .page__content,
   .page__inner-wrap {
     font-size: 18px;
   }
+
 }
 
-/* =============================== */
+/* ================================= */
 /* Paragraph spacing */
-/* =============================== */
+/* ================================= */
 
 .page__content p,
 .page__inner-wrap p {
@@ -67,9 +76,9 @@ body,
   max-width: 70ch;
 }
 
-/* =============================== */
+/* ================================= */
 /* Section headings */
-/* =============================== */
+/* ================================= */
 
 .page__content h2,
 .page__inner-wrap h2 {
@@ -95,18 +104,18 @@ body,
   font-size: 1.05rem;
 }
 
-/* =============================== */
+/* ================================= */
 /* Page title spacing */
-/* =============================== */
+/* ================================= */
 
 .page__title {
   margin-top: 0.5rem;
   margin-bottom: 1.4rem;
 }
 
-/* =============================== */
+/* ================================= */
 /* Lists */
-/* =============================== */
+/* ================================= */
 
 .page__content ul,
 .page__content ol,
@@ -121,18 +130,18 @@ body,
   margin-bottom: 0.45rem;
 }
 
-/* =============================== */
+/* ================================= */
 /* Horizontal rule spacing */
-/* =============================== */
+/* ================================= */
 
 .page__content hr,
 .page__inner-wrap hr {
   margin: 2.2rem 0;
 }
 
-/* =============================== */
+/* ================================= */
 /* Gallery Grid Layout */
-/* =============================== */
+/* ================================= */
 
 .gallery-grid {
   display: grid;
@@ -168,11 +177,9 @@ body,
   color: #666;
 }
 
-/* =============================== */
+/* ================================= */
 /* Career Page Layout Improvements */
-/* =============================== */
-
-/* Top Professional Direction + Contact */
+/* ================================= */
 
 .career-intro {
   display: grid;
@@ -219,9 +226,9 @@ body,
   border: 1px solid #eee;
 }
 
-/* =============================== */
+/* ================================= */
 /* Responsive layout */
-/* =============================== */
+/* ================================= */
 
 @media (max-width: 900px) {
 
@@ -239,9 +246,9 @@ body,
 
 }
 
-/* =============================== */
+/* ================================= */
 /* Project role line styling */
-/* =============================== */
+/* ================================= */
 
 .page__content h3 + p,
 .page__inner-wrap h3 + p {
