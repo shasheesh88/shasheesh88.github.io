@@ -9,9 +9,13 @@ author_profile: false
 
 Hello. I am Shasheesh.
 
-This website is my personal digital space where I document my life journey, learning, and thoughts.
+ I was born and brought up in Telangana. My father is a teacher, and my mother, who was earlier a teacher, later became a full-time homemaker. I have one elder brother.
 
-I believe in growth, discipline, and honest thinking.
+I always wanted to be the best in the things I am interested in, whether it is data science, badminton, or cricket. I always want to be unique and exceptional and stand away from the crowd.
+
+I am deeply connected with my family, especially my father Venkanna and my grandmother Bharataamma. They have had a strong impact on my personality and who I am today. They were very emotional and important to me.
+
+I like fishing a lot. I like staying in nature and being close to it. I enjoy being surrounded by animals like buffaloes, cows, dogs, and others.
 
 ---
 
