@@ -18,12 +18,12 @@ I am deeply connected with my family, especially my father Venkanna and my grand
 I like fishing a lot. I like being in nature and staying close to it. I enjoy being surrounded by animals like buffaloes, cows, dogs, and others.
 
 ## Interests
-
+<img src="/images/A_calm_countryside_river_at_sunset__A_person_sits_peacefully_on_the_grassy_bank__fishing_with_a_simp.png"
+style="float:right; width:320px; margin-left:20px; border-radius:10px;" />
 - Fishing  
 - Technology  
 - Spending time in nature and around animals  
 - Badminton  
-- Writing  
 - Sarcastic conversations with friends  
 
 ---
