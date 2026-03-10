@@ -1,7 +1,27 @@
 ---
 ---
 
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@700&display=swap");
+
+/* Theme */
 @import "minimal-mistakes";
+
+/* ===================================== */
+/* Global Typography */
+/* ===================================== */
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Headings use serif for elegance */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4 {
+  font-family: "Merriweather", serif;
+}
 
 /* Layout width */
 .page__content {
@@ -10,7 +30,7 @@
   font-size: 17px;
 }
 
-/* Slightly improve readability on very large screens */
+/* Improve readability on very large screens */
 @media (min-width: 1200px) {
   .page__content {
     font-size: 18px;
@@ -19,14 +39,16 @@
 
 /* Paragraph spacing */
 .page__content p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  max-width: 70ch;
 }
 
 /* Section headings */
 .page__content h2 {
-  margin-top: 3.2rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* Sub headings (Projects, etc.) */
@@ -65,9 +87,9 @@
   margin: 2.2rem 0;
 }
 
-/* ============================= */
+/* ===================================== */
 /* Gallery Grid Layout */
-/* ============================= */
+/* ===================================== */
 
 .gallery-grid {
   display: grid;
@@ -127,7 +149,6 @@
   margin-top: 1.5rem;
 }
 
-
 .education-item {
   background: #fafafa;
   padding: 1.6rem;
@@ -143,8 +164,14 @@
   margin-top: 1.5rem;
 }
 
-/* Stack on small screens */
-/* Responsive adjustment */
+.skills-grid > div {
+  background: #fafafa;
+  padding: 1.6rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .education-grid {
     grid-template-columns: 1fr;
@@ -159,16 +186,10 @@
   }
 }
 
-.skills-grid > div {
-  background: #fafafa;
-  padding: 1.6rem;
-  border-radius: 12px;
-  border: 1px solid #eee;
-}
-
-
-
+/* ===================================== */
 /* Project role line styling */
+/* ===================================== */
+
 .page__content h3 + p {
   display: flex;
   align-items: baseline;
