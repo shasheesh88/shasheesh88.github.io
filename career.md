@@ -6,93 +6,116 @@ author_profile: false
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
-
-/* Project h3 titles — override the mono style from main.scss for this page */
-.page__content h3 {
-  font-family: 'Crimson Pro', Georgia, serif !important;
-  font-size: 1.2rem !important;
-  font-style: italic !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-  color: #1c1917 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 0.3rem !important;
+/* Two-column section layout */
+.career-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin: 24px 0 40px;
 }
 
-/* "myTVS — 2025" bold company/date line under each h3 */
-.page__content h3 + p {
-  font-family: 'DM Mono', monospace !important;
-  font-size: 0.7rem !important;
-  letter-spacing: 0.15em !important;
-  text-transform: uppercase !important;
-  color: #9a3412 !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  margin-bottom: 12px !important;
-  display: block !important;
-  justify-content: unset !important;
+.col-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #78716c;
+  margin-bottom: 14px;
+  display: block;
 }
 
-/* "Insight gained:" label */
-.page__content p strong,
-.page__inner-wrap p strong {
+/* Project entries */
+.project-entry {
+  border-left: 2px solid #e5e0d8;
+  padding-left: 18px;
+  margin-bottom: 32px;
+}
+
+.project-entry:hover {
+  border-left-color: #9a3412;
+}
+
+.project-title {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #1c1917;
+  margin: 0 0 4px 0;
+}
+
+.project-meta {
   font-family: 'DM Mono', monospace;
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #78716c;
-  font-weight: 400;
+  color: #9a3412;
+  margin-bottom: 12px;
+  display: block;
 }
 
-/* Bullet lists in projects */
-.page__content ul li {
-  padding: 4px 0;
-  border-bottom: 1px solid #ede8df;
-  list-style: none;
-  padding-left: 0;
-  font-size: 0.95rem;
-  color: #1c1917;
+.project-entry ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 10px !important;
 }
 
-.page__content ul li:last-child {
-  border-bottom: none;
+.project-entry ul li {
+  padding: 5px 0 !important;
+  border-bottom: 1px solid #ede8df !important;
+  font-size: 0.92rem !important;
+  color: #1c1917 !important;
+  margin: 0 !important;
 }
 
-.page__content ul {
-  padding-left: 0;
-}
+.project-entry ul li:last-child { border-bottom: none !important; }
 
-/* Achievements list — keep as normal bullets */
-.achievements-list {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.achievements-list li {
-  border-bottom: none !important;
-  list-style: disc !important;
-  padding-left: 0 !important;
-}
-
-/* Personal note placeholder text */
-.placeholder-note {
+.insight-label {
   font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   color: #a8a29e;
-  letter-spacing: 0.06em;
+  margin-top: 10px;
+  display: block;
+}
+
+.placeholder {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: #c8c1b8;
   font-style: italic;
 }
 
-/* Closing reflection */
+/* Ruled lists */
+.ruled-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ruled-list li {
+  padding: 6px 0 !important;
+  border-bottom: 1px solid #ede8df !important;
+  font-size: 0.95rem !important;
+  color: #1c1917 !important;
+  margin: 0 !important;
+}
+
+.ruled-list li:last-child { border-bottom: none !important; }
+
+/* Closing note */
 .closing-note {
   font-style: italic;
   color: #78716c;
   font-size: 0.93rem;
   border-top: 1px solid #d6cfc4;
   padding-top: 24px;
-  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .career-section-grid { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -100,9 +123,9 @@ author_profile: false
 
   <div class="career-summary">
     <h2>Professional Direction</h2>
-    <p>
-      With a background in maths and analytics, and an interest in solving problems with data, I use data science, AI/ML, and cloud platforms to design and build scalable and ethical intelligent systems that create sustainable and meaningful impact.
-    </p>
+    <p>With a background in maths and analytics, and an interest in solving problems with data, I use data science, AI/ML, and cloud platforms to design and build scalable and ethical intelligent systems that create sustainable and meaningful impact.</p>
+    <p>I am drawn to problems that require both structured reasoning and creative thinking. What motivates me most is building systems that not only work technically, but also make real-world processes clearer, faster, and more meaningful.</p>
+    <p class="placeholder">[Write 2–4 sentences here later about why you chose this field.]</p>
   </div>
 
   <div class="career-contact">
@@ -116,15 +139,6 @@ author_profile: false
 </div>
 
 <hr>
-
-## Personal Note  *(optional — edit later)*
-
-I am drawn to problems that require both structured reasoning and creative thinking.  
-What motivates me most is building systems that not only work technically, but also make real-world processes clearer, faster, and more meaningful.
-
-<p class="placeholder-note">[Write 2–4 sentences here later about why you chose this field.]</p>
-
----
 
 ## Education
 
@@ -149,7 +163,7 @@ What motivates me most is building systems that not only work technically, but a
 
 </div>
 
----
+<hr>
 
 ## Skills
 
@@ -192,111 +206,120 @@ What motivates me most is building systems that not only work technically, but a
 
 </div>
 
----
+<hr>
 
 ## Work Experience & Projects
 
+<div class="career-section-grid">
 
-### Generative AI-Based Telematics Insights Agent
-**myTVS (TVS & Sons) — 2025–Present**
+  <div>
 
-- Built an agent using Google's Agent Development Kit (Vertex AI ADK) enabling users to interact with telematics databases using natural language instead of SQL.
-- Deployed on Colab Enterprise runtime (Nvidia Tesla L4 GPU, 15GB RAM, 120GB SSD, n1-standard-4).
-- Integrated MySQL cloud database with validation layers (parameterization + fallback) for efficient and graceful query handling.
+    <div class="project-entry">
+      <p class="project-title">Generative AI-Based Telematics Insights Agent</p>
+      <span class="project-meta">myTVS (TVS & Sons) — 2025–Present</span>
+      <ul>
+        <li>Built an agent using Google's Agent Development Kit (Vertex AI ADK) enabling users to interact with telematics databases using natural language instead of SQL.</li>
+        <li>Deployed on Colab Enterprise runtime (Nvidia Tesla L4 GPU, 15GB RAM, 120GB SSD, n1-standard-4).</li>
+        <li>Integrated MySQL cloud database with validation layers (parameterization + fallback) for efficient and graceful query handling.</li>
+      </ul>
+      <span class="insight-label">Insight gained</span>
+      <p class="placeholder">[Add later — what this project taught you technically or mentally.]</p>
+    </div>
 
-**Insight gained:**  
-<span class="placeholder-note">[Add later — what this project taught you technically or mentally.]</span>
+    <div class="project-entry">
+      <p class="project-title">Car Inspection Analysis & Rating Code Mapping</p>
+      <span class="project-meta">myTVS — 2024</span>
+      <ul>
+        <li>Developed a human-centric system mapping free-text technician responses from 14 inspection components to predefined rating codes.</li>
+        <li>Cleaned input data and dynamically created new rating codes when patterns appeared.</li>
+        <li>Integrated Gemini models on GCP to interpret response nuance and extended system to 62 major inspection components, reducing reliance on generic "Other" entries.</li>
+      </ul>
+      <span class="insight-label">Insight gained</span>
+      <p class="placeholder">[Add reflection later.]</p>
+    </div>
 
----
+    <div class="project-entry">
+      <p class="project-title">Vehicle Inspection Analysis & Custom Message Generation</p>
+      <span class="project-meta">myTVS — 2025</span>
+      <ul>
+        <li>Designed a system analyzing vehicle inspection OLTP data.</li>
+        <li>Generated personalized owner reports.</li>
+        <li>Automated message generation using fine-tuned Gemini-2.5-Flash on Vertex AI.</li>
+      </ul>
+      <span class="insight-label">Insight gained</span>
+      <p class="placeholder">[Add reflection later.]</p>
+    </div>
 
-### Car Inspection Analysis & Rating Code Mapping
-**myTVS — 2024**
+  </div>
 
-- Developed a human-centric system mapping free-text technician responses from 14 inspection components to predefined rating codes.
-- Cleaned input data and dynamically created new rating codes when patterns appeared.
-- Integrated Gemini models on GCP to interpret response nuance and extended system to 62 major inspection components, reducing reliance on generic "Other" entries.
+  <div>
 
-**Insight gained:**  
-<span class="placeholder-note">[Add reflection later.]</span>
+    <div class="project-entry">
+      <p class="project-title">Used Car Price Prediction System</p>
+      <span class="project-meta">myTVS — 2025</span>
+      <ul>
+        <li>Built a CatBoost model for price estimation.</li>
+        <li>Implemented preprocessing and fuzzy variant normalization using RapidFuzz.</li>
+        <li>Deployed a Flask REST API via Docker on Google Cloud Run.</li>
+        <li>Added feedback loop for model refinement.</li>
+      </ul>
+      <span class="insight-label">Insight gained</span>
+      <p class="placeholder">[Add reflection later.]</p>
+    </div>
 
----
+    <div class="project-entry">
+      <p class="project-title">Computational Research — Battery Interfaces</p>
+      <span class="project-meta">2021–2022</span>
+      <p>Studied effects of Ni concentration on formation mechanisms and structure of cathode-electrolyte interfaces in LiNixCoyMn1−x−yO2 materials.</p>
+      <p>Applied Monte Carlo simulations and density functional calculations for mechanism analysis.</p>
+      <span class="insight-label">Insight gained</span>
+      <p class="placeholder">[What research taught you about thinking or problem solving.]</p>
+    </div>
 
-### Vehicle Inspection Analysis & Custom Message Generation
-**myTVS — 2025**
+    <div class="project-entry">
+      <p class="project-title">Credit Approval Ensemble Model</p>
+      <span class="project-meta">Apr 2023 – Jun 2023</span>
+      <ul>
+        <li>Built ML models for credit prediction.</li>
+        <li>Designed ensemble combining Naive Bayes, SVM, and KNN.</li>
+        <li>Tuned XGBoost classifier and optimized ANN.</li>
+        <li>Used scikit-learn, NumPy, and Pandas for preprocessing and modeling.</li>
+      </ul>
+      <span class="insight-label">Insight gained</span>
+      <p class="placeholder">[Add reflection later.]</p>
+    </div>
 
-- Designed a system analyzing vehicle inspection OLTP data.
-- Generated personalized owner reports.
-- Automated message generation using fine-tuned Gemini-2.5-Flash on Vertex AI.
+  </div>
 
-**Insight gained:**  
-<span class="placeholder-note">[Add reflection later.]</span>
+</div>
 
----
+<hr>
 
-### Used Car Price Prediction System
-**myTVS — 2025**
+<div class="career-section-grid">
 
-- Built a CatBoost model for price estimation.
-- Implemented preprocessing and fuzzy variant normalization using RapidFuzz.
-- Deployed a Flask REST API via Docker on Google Cloud Run.
-- Added feedback loop for model refinement.
+  <div>
+    <span class="col-label">Achievements</span>
+    <ul class="ruled-list">
+      <li>Qualified JEE-Advanced</li>
+      <li>Certificate of Extracurricular Excellence in Badminton from Dean of Students' Welfare</li>
+    </ul>
+  </div>
 
-**Insight gained:**  
-<span class="placeholder-note">[Add reflection later.]</span>
+  <div>
+    <span class="col-label">Current Focus</span>
+    <p style="font-size:0.9rem; color:#78716c; font-style:italic; margin-bottom:10px;">Right now I am focused on:</p>
+    <ul class="ruled-list">
+      <li>Strengthening real-world AI system deployment skills</li>
+      <li>Improving model interpretability and reliability</li>
+      <li>Learning scalable architecture design</li>
+      <li>Deepening mathematical intuition behind ML systems</li>
+    </ul>
+  </div>
 
----
+</div>
 
-### Computational Research — Battery Interfaces
-**2021–2022**
+<hr>
 
-Studied effects of Ni concentration on formation mechanisms and structure of cathode-electrolyte interfaces in LiNixCoyMn1−x−yO2 materials.
+<p style="font-size:0.97rem; color:#1c1917; max-width:60ch;">I aim to work on systems that combine strong math foundations, responsible AI practices, and practical deployment — systems that are not only intelligent, but useful, trustworthy, and scalable.</p>
 
-Applied Monte Carlo simulations and density functional calculations for mechanism analysis.
-
-**Insight gained:**  
-<span class="placeholder-note">[What research taught you about thinking or problem solving.]</span>
-
----
-
-### Credit Approval Ensemble Model
-**Apr 2023 – Jun 2023**
-
-- Built ML models for credit prediction.
-- Designed ensemble combining Naive Bayes, SVM, and KNN.
-- Tuned XGBoost classifier and optimized ANN.
-- Used scikit-learn, NumPy, and Pandas for preprocessing and modeling.
-
-**Insight gained:**  
-<span class="placeholder-note">[Add reflection later.]</span>
-
----
-
-## Achievements
-
-<ul class="achievements-list">
-  <li>Qualified JEE-Advanced</li>
-  <li>Certificate of Extracurricular Excellence in Badminton from Dean of Students' Welfare</li>
-</ul>
-
----
-
-## Current Focus  *(optional but powerful section)*
-
-Right now I am focused on:
-
-- strengthening real-world AI system deployment skills  
-- improving model interpretability and reliability  
-- learning scalable architecture design  
-- deepening mathematical intuition behind ML systems  
-
----
-
-## Long-Term Direction  *(edit anytime)*
-
-I aim to work on systems that combine strong math foundations, responsible AI practices, and practical deployment — systems that are not only intelligent, but useful, trustworthy, and scalable.
-
----
-
-## Closing Reflection
-
-<p class="closing-note">This page is not a static résumé.<br>It is a record of how my skills, thinking, and direction evolve over time.</p>
+<p class="closing-note">This page is not a static résumé. It is a record of how my skills, thinking, and direction evolve over time.</p>
