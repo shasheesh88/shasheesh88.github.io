@@ -17,6 +17,16 @@ That change is intentional.
 
 ## Core Beliefs
 
+Main issue I encountered in my life is that when you know you are unique and capable, and you are working toward something meaningful, not getting enough opportunity to showcase or contribute your skills is very disappointing.
+
+You may know that you are the best and doing extraordinary things, but you are often evaluated or screened by people who may not be the right ones for that responsibility. Yet their approval is required to become part of a team. This saddens me the most.
+
+Along with this, health and surroundings are very important in bringing out extraordinary work.
+
+I developed practicing  positive self-talk. Many times the outcomes may not be in your favour, but it gives  strength to keep moving forward even when I face the winds of failure.
+
+Shashi is always calm. He is peaceful and mindful. Shashi is healthy.
+
 These are principles I currently consider true enough to live by:
 
 - Discipline creates freedom  
