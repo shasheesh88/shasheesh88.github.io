@@ -1,8 +1,4 @@
-<script>
-if(sessionStorage.getItem("auth") !== "yes"){
-   window.location.href = "/password.html";
-}
-</script>
+
 
 ---
 layout: single
@@ -10,7 +6,11 @@ title: "Career"
 permalink: /career/
 author_profile: false
 ---
-
+<script>
+if(sessionStorage.getItem("auth") !== "yes"){
+   window.location.href = "/password.html";
+}
+</script>
 <style>
 /* Two-column section layout */
 .career-section-grid {
