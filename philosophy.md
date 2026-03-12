@@ -17,24 +17,35 @@ That change is intentional.
 
 ## Core Beliefs
 
-Main issue I encountered in my life is that when you know you are unique and capable, and you are working toward something meaningful, not getting enough opportunity to showcase or contribute your skills is very disappointing.
+The main challenge I have faced in life journey so far is this, even when I know I am unique and capable, and I work wholeheartedly on something meaningful, I often do not get enough opportunities to show or use my skills. This makes me feel like giving up or being lost.
 
-You may know that you are the best and doing extraordinary things, but you are often evaluated or screened by people who may not be the right ones for that responsibility. Yet their approval is required to become part of a team. This saddens me the most.
+I believe I can do extraordinary things, but I am often evaluated or screened by people who are not the right ones for that responsibility. Their approval is still required for me to join a team. That is what saddens me most.
 
-Along with this, health and surroundings are very important in bringing out extraordinary work.
+I believe good health and a supportive family are very important for producing the best version of yourself.
 
-I developed practicing  positive self-talk. Many times the outcomes may not be in your favour, but it gives  strength to keep moving forward even when I face the winds of failure.
+I have developed the habit of positive self-talk. Many times the outcome is not in my favor, but this practice gives me the courage to keep moving forward in the winds of failure.
 
-Shashi is always calm. He is peaceful and mindful. Shashi is healthy.
+I remind myself that Shashi is calm, Shashi is peaceful, Shashi is mindful, and healthy.
 
-These are principles I currently consider true enough to live by:
+Along the way, I have been fortunate to be surrounded by a good environment and good people. Sometimes I feel I am simply lucky. I am grateful for my parents, the chance to play exceptional badminton, the guidance I received for my master’s thesis, my manager, joining NITK, and meeting good people there. All these experiences shaped my journey.
 
-- Discipline creates freedom  
-- Consistency matters more than intensity  
-- Truth matters more than comfort  
-- Growth requires discomfort  
-- Clarity comes from reflection  
-- Understanding is more valuable than opinion  
+Sometimes I also feel that, despite emotional ups and downs, the choices I made eventually placed me in environments where I felt comfortable and supported.
+
+These are the principles I try to live by:
+
+Stay grounded and humble.
+
+Put in consistent effort.
+
+Be unique and help the people around me without expecting anything in return.
+
+Live in a way that makes a meaningful difference to society.
+
+Be exceptional, but ethical.
+
+Care for nature and protect my surroundings.
+
+Respect myself. I accept emotions such as hatred, jealousy, and disappointment when they appear. I embrace them. Happiness and peaceful moments are very rare; you should not let them go unnoticed. Once you encounter them, live in them.
 
 *(I will refine and expand this list as my thinking evolves.)*
 
