@@ -2,19 +2,60 @@
 ---
 
 /* ================================= */
-/* Google Fonts */
+/* Google Fonts                      */
 /* ================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap");
 
 /* ================================= */
-/* Theme */
+/* Theme                             */
 /* ================================= */
 
 @import "minimal-mistakes";
 
 /* ================================= */
-/* Global Typography */
+/* CSS Variables — earthy palette    */
+/* ================================= */
+
+:root {
+  --paper:      #f5f0e8;
+  --paper-alt:  #ede8df;
+  --ink:        #1c1917;
+  --ink-mid:    #44403c;
+  --ink-light:  #78716c;
+  --border:     #d6cfc4;
+  --rust:       #9a3412;
+  --rust-faint: #fef3ee;
+  --serif:      'Lora', Georgia, 'Times New Roman', serif;
+  --mono:       'DM Mono', 'Courier New', monospace;
+  --display:    'Crimson Pro', Georgia, serif;
+}
+
+/* ================================= */
+/* Base — background & body          */
+/* ================================= */
+
+html {
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+}
+
+/* Subtle paper grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ================================= */
+/* Global Typography                 */
 /* ================================= */
 
 body,
@@ -23,10 +64,12 @@ body,
 .page__inner-wrap,
 .layout--single,
 .layout--wide {
-  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+  font-family: var(--serif) !important;
 }
 
-/* Headings */
+/* ================================= */
+/* Headings                          */
+/* ================================= */
 
 .page__title,
 .page__content h1,
@@ -41,33 +84,83 @@ body,
 .layout--wide h2,
 .layout--wide h3,
 .layout--wide h4 {
-  font-family: "Merriweather", serif !important;
+  font-family: var(--display) !important;
+  font-weight: 400 !important;
+  color: var(--ink) !important;
+}
+
+.page__title {
+  font-size: 2.6rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.02em !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 14px !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.page__content h1,
+.page__inner-wrap h1 {
+  font-size: 2.4rem !important;
+  font-weight: 300 !important;
+  border: none !important;
+}
+
+.page__content h2,
+.page__inner-wrap h2 {
+  font-size: 1.45rem !important;
+  font-style: italic !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 6px !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.01em !important;
+}
+
+.page__content h3,
+.page__inner-wrap h3 {
+  font-family: var(--mono) !important;
+  font-size: 0.68rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--ink-light) !important;
+  margin-top: 2.2rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Project h3 headings on career page — slightly larger */
+.page__content h3 + p strong,
+.page__inner-wrap h3 + p strong {
+  font-family: var(--mono) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: var(--rust) !important;
 }
 
 /* ================================= */
-/* Layout width */
+/* Layout width                      */
 /* ================================= */
 
 .page__content,
 .page__inner-wrap {
   max-width: 1100px;
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 17px;
+  color: var(--ink);
 }
 
-/* Improve readability on very large screens */
-
 @media (min-width: 1200px) {
-
   .page__content,
   .page__inner-wrap {
     font-size: 18px;
   }
-
 }
 
 /* ================================= */
-/* Improve wide page readability */
+/* Wide layout readability           */
 /* ================================= */
 
 .layout--wide .page__content {
@@ -78,58 +171,33 @@ body,
 
 .layout--wide .page__content p {
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 /* ================================= */
-/* Paragraph spacing */
+/* Paragraph spacing                 */
 /* ================================= */
 
 .page__content p,
 .page__inner-wrap p {
   margin-bottom: 1.2rem;
   max-width: 70ch;
+  color: var(--ink);
 }
 
 /* ================================= */
-/* Section headings */
+/* Horizontal rule                   */
 /* ================================= */
 
-.page__content h2,
-.page__inner-wrap h2 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-/* Sub headings */
-
-.page__content h3,
-.page__inner-wrap h3 {
-  margin-top: 2.2rem;
-  margin-bottom: 0.6rem;
-  font-weight: 600;
-  font-size: 1.15rem;
-}
-
-.education-item strong {
-  display: block;
-  margin-bottom: 0.6rem;
-  font-size: 1.05rem;
+.page__content hr,
+.page__inner-wrap hr {
+  border: none !important;
+  border-top: 1px solid var(--border) !important;
+  margin: 2.2rem 0 !important;
 }
 
 /* ================================= */
-/* Page title spacing */
-/* ================================= */
-
-.page__title {
-  margin-top: 0.5rem;
-  margin-bottom: 1.4rem;
-}
-
-/* ================================= */
-/* Lists */
+/* Lists                             */
 /* ================================= */
 
 .page__content ul,
@@ -143,19 +211,161 @@ body,
 .page__content li,
 .page__inner-wrap li {
   margin-bottom: 0.45rem;
+  color: var(--ink);
+  line-height: 1.8;
 }
 
 /* ================================= */
-/* Horizontal rule spacing */
+/* Blockquote                        */
 /* ================================= */
 
-.page__content hr,
-.page__inner-wrap hr {
-  margin: 2.2rem 0;
+.page__content blockquote,
+.page__inner-wrap blockquote {
+  border-left: 2px solid var(--rust) !important;
+  background: var(--rust-faint) !important;
+  padding: 14px 22px !important;
+  margin: 24px 0 !important;
+  font-style: italic !important;
+  color: var(--ink-mid) !important;
+  font-size: 1rem !important;
+  border-radius: 0 !important;
+}
+
+.page__content blockquote p,
+.page__inner-wrap blockquote p {
+  margin: 0 !important;
 }
 
 /* ================================= */
-/* Gallery Grid Layout */
+/* Links                             */
+/* ================================= */
+
+a {
+  color: var(--rust) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: border-color 0.2s !important;
+}
+
+a:hover {
+  border-bottom-color: var(--rust) !important;
+}
+
+/* ================================= */
+/* Masthead / Nav                    */
+/* ================================= */
+
+.masthead {
+  background: var(--paper) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+.masthead__inner-wrap {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+.site-title,
+.masthead__menu a.site-title {
+  font-family: var(--serif) !important;
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.greedy-nav a {
+  font-family: var(--mono) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--ink-mid) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: color 0.2s !important;
+}
+
+.greedy-nav a:hover {
+  color: var(--rust) !important;
+  border-bottom: none !important;
+}
+
+.greedy-nav .visible-links a::before {
+  background: var(--rust) !important;
+}
+
+/* ================================= */
+/* Author Sidebar                    */
+/* ================================= */
+
+.sidebar .author__name {
+  font-family: var(--display) !important;
+  font-size: 1.3rem !important;
+  font-weight: 400 !important;
+  color: var(--ink) !important;
+}
+
+.sidebar .author__bio {
+  font-family: var(--mono) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.12em !important;
+  color: var(--ink-light) !important;
+  text-transform: uppercase !important;
+}
+
+.sidebar .author__location,
+.sidebar .author__links a {
+  font-family: var(--mono) !important;
+  font-size: 0.7rem !important;
+  color: var(--ink-light) !important;
+}
+
+/* ================================= */
+/* Footer                            */
+/* ================================= */
+
+.page__footer {
+  background: var(--paper-alt) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--ink-light) !important;
+}
+
+.page__footer-follow,
+.page__footer-copyright {
+  font-family: var(--mono) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--ink-light) !important;
+}
+
+/* ================================= */
+/* Code                              */
+/* ================================= */
+
+code, pre {
+  font-family: var(--mono) !important;
+  font-size: 0.85em !important;
+  background: var(--paper-alt) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--ink-mid) !important;
+  border-radius: 2px !important;
+}
+
+/* ================================= */
+/* Selection highlight               */
+/* ================================= */
+
+::selection {
+  background: #f4c7b0;
+  color: var(--ink);
+}
+
+/* ================================= */
+/* Gallery Grid                      */
 /* ================================= */
 
 .gallery-grid {
@@ -169,31 +379,36 @@ body,
   margin-bottom: 2.5rem;
 }
 
-/* Individual Gallery Item */
-
 .gallery-item {
   text-align: center;
 }
-
-/* Image Styling */
 
 .gallery-item img {
   width: 100%;
   height: 320px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;
+  filter: sepia(12%) contrast(0.95);
+  transition: filter 0.3s, transform 0.3s;
 }
 
-/* Caption Styling */
+.gallery-item:hover img {
+  filter: sepia(0%) contrast(1);
+  transform: scale(1.01);
+}
 
 .gallery-item p {
-  margin-top: 0.7rem;
-  font-size: 0.9rem;
-  color: #666;
+  margin-top: 0.7rem !important;
+  font-family: var(--mono) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.08em !important;
+  color: var(--ink-light) !important;
+  line-height: 1.5 !important;
+  font-style: normal !important;
 }
 
 /* ================================= */
-/* Career Page Layout Improvements */
+/* Career Page                       */
 /* ================================= */
 
 .career-intro {
@@ -205,11 +420,22 @@ body,
 }
 
 .career-contact {
-  background: #fafafa;
+  background: var(--paper-alt);
   padding: 1.4rem;
-  border-radius: 12px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border);
+  border-radius: 0;
 }
+
+.career-contact h3 {
+  font-family: var(--mono) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--ink-light) !important;
+  margin-bottom: 10px !important;
+}
+
+/* Education */
 
 .education-grid {
   display: grid;
@@ -219,30 +445,66 @@ body,
 }
 
 .education-item {
-  background: #fafafa;
+  background: var(--paper-alt);
   padding: 1.6rem;
-  border-radius: 12px;
-  border: 1px solid #eee;
+  border: none;
+  border-left: 2px solid var(--rust);
+  border-radius: 0;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--ink);
 }
 
-/* Skills section */
+.education-item strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.0rem;
+  font-family: var(--display);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Skills */
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  gap: 24px;
   margin-top: 1.5rem;
 }
 
 .skills-grid > div {
-  background: #fafafa;
-  padding: 1.6rem;
-  border-radius: 12px;
-  border: 1px solid #eee;
+  background: var(--paper-alt);
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--ink-mid);
+}
+
+.skills-grid > div strong {
+  display: block;
+  font-family: var(--mono) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--rust) !important;
+  margin-bottom: 8px !important;
+  font-weight: 400 !important;
+}
+
+/* Project role line */
+
+.page__content h3 + p,
+.page__inner-wrap h3 + p {
+  font-weight: 400;
+  color: var(--ink-mid);
+  font-style: italic;
 }
 
 /* ================================= */
-/* Responsive layout */
+/* Responsive                        */
 /* ================================= */
 
 @media (max-width: 900px) {
@@ -259,19 +521,4 @@ body,
     grid-template-columns: 1fr;
   }
 
-}
-
-/* ================================= */
-/* Project role line styling */
-/* ================================= */
-
-.page__content h3 + p,
-.page__inner-wrap h3 + p {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-weight: 500;
-  color: #555;
 }
