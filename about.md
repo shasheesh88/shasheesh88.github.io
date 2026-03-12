@@ -1,10 +1,15 @@
+
 ---
 layout: wide
 title: "About Me"
 permalink: /about/
 author_profile: false
 ---
-
+<script>
+if(sessionStorage.getItem("auth") !== "yes"){
+   window.location.href = "/password.html";
+}
+</script>
 <style>
 /* Force full width on wide layout */
 .layout--wide .page__content {
