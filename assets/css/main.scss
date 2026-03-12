@@ -141,15 +141,30 @@ body,
 }
 
 /* ================================= */
-/* Layout width                      */
+/* Layout — use full available width */
 /* ================================= */
+
+/* Remove Minimal Mistakes sidebar gap on pages without sidebar */
+.layout--single,
+.layout--wide {
+  width: 100% !important;
+}
 
 .page__content,
 .page__inner-wrap {
-  max-width: 1100px;
+  width: 100% !important;
+  max-width: 100% !important;
   line-height: 1.8;
   font-size: 17px;
   color: var(--ink);
+  float: none !important;
+}
+
+/* Widen the outer container */
+#main {
+  max-width: 1280px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
 
 @media (min-width: 1200px) {
@@ -159,19 +174,42 @@ body,
   }
 }
 
-/* ================================= */
-/* Wide layout readability           */
-/* ================================= */
-
+/* Wide layout — truly full width */
 .layout--wide .page__content {
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .layout--wide .page__content p {
   font-size: 18px;
   line-height: 1.8;
+}
+
+/* ================================= */
+/* Two-column page layout            */
+/* pages without sidebar get 2 cols  */
+/* ================================= */
+
+.layout--single .page__inner-wrap,
+.layout--wide .page__inner-wrap {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto 1fr !important;
+  gap: 0 56px !important;
+  align-items: start !important;
+}
+
+/* Title spans full width */
+.layout--single .page__title,
+.layout--wide .page__title {
+  grid-column: 1 / -1 !important;
+}
+
+/* Content fills both columns on pages that need it */
+.layout--single .page__content,
+.layout--wide .page__content {
+  grid-column: 1 / -1 !important;
 }
 
 /* ================================= */
@@ -181,8 +219,26 @@ body,
 .page__content p,
 .page__inner-wrap p {
   margin-bottom: 1.2rem;
-  max-width: 70ch;
+  max-width: 68ch;
   color: var(--ink);
+}
+
+/* Inside grid divs, let paragraphs flow naturally */
+.page__content div p,
+.page__inner-wrap div p {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .layout--single .page__inner-wrap,
+  .layout--wide .page__inner-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  #main {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 /* ================================= */
