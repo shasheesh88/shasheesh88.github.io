@@ -1,3 +1,8 @@
+<script>
+if(sessionStorage.getItem("auth") !== "yes"){
+   window.location.href = "/password.html";
+}
+</script>
 ---
 layout: single
 title: "Philosophy"
