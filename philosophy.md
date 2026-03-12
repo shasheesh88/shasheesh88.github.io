@@ -4,6 +4,100 @@ title: "Philosophy"
 permalink: /philosophy/
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+
+.page__content {
+  font-family: 'Lora', Georgia, serif;
+  color: #1c1917;
+  line-height: 1.85;
+}
+
+.page__content h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.45rem;
+  color: #1c1917;
+  border-bottom: 1px solid #d6cfc4;
+  padding-bottom: 6px;
+  margin-top: 2.6rem;
+  font-style: italic;
+}
+
+.page__content h3 {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #78716c;
+  margin-top: 2.4rem;
+}
+
+.page__content hr {
+  border: none;
+  border-top: 1px solid #e5e0d8;
+  margin: 32px 0;
+}
+
+.page__content blockquote {
+  border-left: 2px solid #9a3412;
+  background: #fef3ee;
+  padding: 14px 22px;
+  margin: 24px 0;
+  font-style: italic;
+  color: #44403c;
+  font-size: 1rem;
+}
+.page__content blockquote p { margin: 0; }
+
+/* Bullet lists — no bullets, ruled lines */
+.page__content ul {
+  list-style: none;
+  padding: 0;
+}
+.page__content ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ede8df;
+  font-size: 0.97rem;
+  color: #1c1917;
+}
+.page__content ul li:last-child {
+  border-bottom: none;
+}
+
+/* "Principles" plain paragraphs block */
+.principles-block {
+  border-left: 2px solid #d6cfc4;
+  padding: 4px 0 4px 20px;
+  margin: 20px 0;
+}
+.principles-block p {
+  margin: 0 0 10px 0 !important;
+  font-size: 0.97rem;
+  color: #1c1917;
+}
+.principles-block p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.refine-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: #78716c;
+  letter-spacing: 0.08em;
+  margin-top: 16px;
+}
+
+/* Closing note */
+.page__content h3 + p,
+.page__content h3 + p + p {
+  font-style: italic;
+  color: #78716c;
+  font-size: 0.93rem;
+}
+</style>
+
 ## How I See Life
 
 This page is a record of how I understand life at this point in time.
@@ -25,33 +119,29 @@ I believe good health and a supportive family are very important for producing t
 
 I have developed the habit of positive self-talk. Many times the outcome is not in my favor, but this practice gives me the courage to keep moving forward in the winds of failure.
 
-I remind myself that Shashi is calm, Shashi is peaceful, Shashi is mindful, and healthy.
+> I remind myself that Shashi is calm, Shashi is peaceful, Shashi is mindful, and healthy.
 
-Along the way, I have been fortunate to be surrounded by a good environment and good people. Sometimes I feel I am simply lucky. I am grateful for my parents, the chance to play exceptional badminton, the guidance I received for my master’s thesis, my manager, joining NITK, and meeting good people there. All these experiences shaped my journey.
+Along the way, I have been fortunate to be surrounded by a good environment and good people. Sometimes I feel I am simply lucky. I am grateful for my parents, the chance to play exceptional badminton, the guidance I received for my master's thesis, my manager, joining NITK, and meeting good people there. All these experiences shaped my journey.
 
 Sometimes I also feel that, despite emotional ups and downs, the choices I made eventually placed me in environments where I felt comfortable and supported.
 
 These are the principles I try to live by:
 
-Stay grounded and humble.
+<div class="principles-block">
+<p>Stay grounded and humble.</p>
+<p>Put in consistent effort.</p>
+<p>Be unique and help the people around me without expecting anything in return.</p>
+<p>Live in a way that makes a meaningful difference to society.</p>
+<p>Be exceptional, but ethical.</p>
+<p>Care for nature and protect my surroundings.</p>
+<p>Respect myself. I accept emotions such as hatred, jealousy, and disappointment when they appear. I embrace them. Happiness and peaceful moments are very rare; you should not let them go unnoticed. Once you encounter them, live in them.</p>
+</div>
 
-Put in consistent effort.
-
-Be unique and help the people around me without expecting anything in return.
-
-Live in a way that makes a meaningful difference to society.
-
-Be exceptional, but ethical.
-
-Care for nature and protect my surroundings.
-
-Respect myself. I accept emotions such as hatred, jealousy, and disappointment when they appear. I embrace them. Happiness and peaceful moments are very rare; you should not let them go unnoticed. Once you encounter them, live in them.
-
-*(I will refine and expand this list as my thinking evolves.)*
+<p class="refine-note">*(I will refine and expand this list as my thinking evolves.)*</p>
 
 ---
 
-## Lessons I’ve Learned So Far
+## Lessons I've Learned So Far
 
 Some lessons only become clear after experience teaches them:
 
@@ -91,7 +181,7 @@ These are rules I try to live by:
 
 ## Long-Term Philosophy
 
-I don’t aim to live a perfect life.  
+I don't aim to live a perfect life.  
 I aim to live a conscious one.
 
 For me, a meaningful life is built through:
