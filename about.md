@@ -5,47 +5,140 @@ permalink: /about/
 author_profile: false
 ---
 
-## Introduction
+<style>
+/* Force full width on wide layout */
+.layout--wide .page__content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
 
-Hello. I am Shasheesh.
+/* Two-column intro */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 40px;
+}
 
-I was born and brought up in Telangana. My father is a teacher, and my mother, who was earlier a teacher, later became a full-time homemaker. I have one elder brother.
+/* Interests block */
+.interests-block {
+  background: #ede8df;
+  border: 1px solid #d6cfc4;
+  padding: 28px;
+}
 
-I always wanted to be the best in the things I am interested in, whether it is data science, badminton, or cricket. I always want to be unique and exceptional and stand away from the crowd.
+.interests-block ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
-I am deeply connected with my family, especially my father Venkanna and my grandmother Bharataamma. They have had a strong impact on my personality and who I am today. They are very important to me.
+.interests-block ul li {
+  padding: 7px 0 !important;
+  border-bottom: 1px solid #d6cfc4 !important;
+  font-style: italic !important;
+  margin: 0 !important;
+}
 
-I like fishing a lot. I like being in nature and staying close to it. I enjoy being surrounded by animals like buffaloes, cows, dogs, and others.
+.interests-block ul li:last-child {
+  border-bottom: none !important;
+}
 
----
+/* Image */
+.about-image img {
+  width: 100%;
+  display: block;
+  filter: sepia(12%) contrast(0.95);
+}
 
-## Interests
+/* Vision block */
+.vision-block {
+  border-left: 2px solid #d6cfc4;
+  padding: 4px 0 4px 20px;
+  margin: 16px 0;
+}
 
-<div style="background:#ede8df; border:1px solid #d6cfc4; padding:28px; display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
+.vision-block p {
+  margin: 0 0 10px 0 !important;
+}
 
-  <div style="flex:1; min-width:250px;">
-    <ul style="list-style:none; padding:0; margin:0;">
-      <li style="padding:7px 0; border-bottom:1px solid #d6cfc4; font-style:italic;">Fishing</li>
-      <li style="padding:7px 0; border-bottom:1px solid #d6cfc4; font-style:italic;">Technology</li>
-      <li style="padding:7px 0; border-bottom:1px solid #d6cfc4; font-style:italic;">Spending time in nature and around animals</li>
-      <li style="padding:7px 0; border-bottom:1px solid #d6cfc4; font-style:italic;">Badminton</li>
-      <li style="padding:7px 0; font-style:italic;">Sarcastic conversations with friends</li>
-    </ul>
+.vision-block p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Section divider */
+.about-divider {
+  border: none;
+  border-top: 1px solid #e5e0d8;
+  margin: 36px 0;
+}
+
+/* Section label */
+.section-label {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #1c1917;
+  border-bottom: 1px solid #d6cfc4;
+  padding-bottom: 6px;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<hr class="about-divider" style="margin-top:0;">
+
+<div class="about-grid">
+
+  <div>
+    <p class="section-label">Introduction</p>
+    <p>Hello. I am Shasheesh.</p>
+    <p>I was born and brought up in Telangana. My father is a teacher, and my mother, who was earlier a teacher, later became a full-time homemaker. I have one elder brother.</p>
+    <p>I always wanted to be the best in the things I am interested in, whether it is data science, badminton, or cricket. I always want to be unique and exceptional and stand away from the crowd.</p>
+    <p>I am deeply connected with my family, especially my father Venkanna and my grandmother Bharataamma. They have had a strong impact on my personality and who I am today. They are very important to me.</p>
+    <p>I like fishing a lot. I like being in nature and staying close to it. I enjoy being surrounded by animals like buffaloes, cows, dogs, and others.</p>
   </div>
 
-  <div style="flex:1; min-width:260px; text-align:center;">
-    <img src="/images/A_calm_countryside_river_at_sunset__A_person_sits_peacefully_on_the_grassy_bank__fishing_with_a_simp.png"
-    style="max-width:100%; filter:sepia(12%) contrast(0.95);" />
+  <div>
+    <p class="section-label">Interests</p>
+    <div class="interests-block">
+      <ul>
+        <li>Fishing</li>
+        <li>Technology</li>
+        <li>Spending time in nature and around animals</li>
+        <li>Badminton</li>
+        <li>Sarcastic conversations with friends</li>
+      </ul>
+    </div>
+    <div class="about-image" style="margin-top:20px;">
+      <img src="/images/A_calm_countryside_river_at_sunset__A_person_sits_peacefully_on_the_grassy_bank__fishing_with_a_simp.png" alt="Fishing at sunset" />
+    </div>
   </div>
 
 </div>
 
----
+<hr class="about-divider">
 
-## Long-Term Vision
+<div class="about-grid">
 
-<div style="border-left:2px solid #d6cfc4; padding:4px 0 4px 20px; margin:16px 0;">
-  <p style="margin:0 0 10px 0;">Having my own space where I can fish and spend days surrounded by flora and fauna.</p>
-  <p style="margin:0 0 10px 0;">Living a peaceful and calm life.</p>
-  <p style="margin:0;">Spending quality time with my family.</p>
+  <div>
+    <p class="section-label">Long-Term Vision</p>
+    <div class="vision-block">
+      <p>Having my own space where I can fish and spend days surrounded by flora and fauna.</p>
+      <p>Living a peaceful and calm life.</p>
+      <p>Spending quality time with my family.</p>
+    </div>
+  </div>
+
+  <div>
+    <!-- intentionally open — add a photo or quote here later -->
+  </div>
+
 </div>
