@@ -1,15 +1,15 @@
-<script>
-if(sessionStorage.getItem("auth") !== "yes"){
-   window.location.href = "/password.html";
-}
-</script>
+
 ---
 layout: single
 title: "Gallery"
 permalink: /gallery/
 author_profile: false
 ---
-
+<script>
+if(sessionStorage.getItem("auth") !== "yes"){
+   window.location.href = "/password.html";
+}
+</script>
 <div class="gallery-grid">
   <div class="gallery-item">
     <img src="{{ '/images/kalam_sir.jpeg' | relative_url }}" alt="A.P.J. Abdul Kalam">
