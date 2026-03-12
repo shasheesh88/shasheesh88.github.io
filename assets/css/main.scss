@@ -130,86 +130,47 @@ body,
   margin-bottom: 0.6rem !important;
 }
 
-/* Project h3 headings on career page — slightly larger */
-.page__content h3 + p strong,
-.page__inner-wrap h3 + p strong {
-  font-family: var(--mono) !important;
-  font-size: 0.7rem !important;
-  letter-spacing: 0.15em !important;
-  text-transform: uppercase !important;
-  color: var(--rust) !important;
-}
-
 /* ================================= */
-/* Layout — use full available width */
+/* Layout — break MM's narrow box    */
 /* ================================= */
 
-/* Remove Minimal Mistakes sidebar gap on pages without sidebar */
-.layout--single,
-.layout--wide {
-  width: 100% !important;
-}
-
+/* Remove every width cap MM applies */
+#main,
+.page,
+.page__inner-wrap,
 .page__content,
-.page__inner-wrap {
+.layout--single,
+.layout--wide,
+.layout--single .page,
+.layout--wide .page {
+  max-width: none !important;
   width: 100% !important;
-  max-width: 100% !important;
-  line-height: 1.8;
-  font-size: 17px;
-  color: var(--ink);
   float: none !important;
 }
 
-/* Widen the outer container */
+/* Side padding only on the outermost wrapper */
 #main {
-  max-width: 1280px !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
+  padding-top: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+.page {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.page__content {
+  line-height: 1.8;
+  font-size: 17px;
+  color: var(--ink);
 }
 
 @media (min-width: 1200px) {
-  .page__content,
-  .page__inner-wrap {
+  .page__content {
     font-size: 18px;
   }
-}
-
-/* Wide layout — truly full width */
-.layout--wide .page__content {
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-.layout--wide .page__content p {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-/* ================================= */
-/* Two-column page layout            */
-/* pages without sidebar get 2 cols  */
-/* ================================= */
-
-.layout--single .page__inner-wrap,
-.layout--wide .page__inner-wrap {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  grid-template-rows: auto 1fr !important;
-  gap: 0 56px !important;
-  align-items: start !important;
-}
-
-/* Title spans full width */
-.layout--single .page__title,
-.layout--wide .page__title {
-  grid-column: 1 / -1 !important;
-}
-
-/* Content fills both columns on pages that need it */
-.layout--single .page__content,
-.layout--wide .page__content {
-  grid-column: 1 / -1 !important;
 }
 
 /* ================================= */
@@ -219,26 +180,14 @@ body,
 .page__content p,
 .page__inner-wrap p {
   margin-bottom: 1.2rem;
-  max-width: 68ch;
   color: var(--ink);
+  max-width: 72ch;
 }
 
-/* Inside grid divs, let paragraphs flow naturally */
+/* Inside any grid/flex container let text fill the column */
 .page__content div p,
 .page__inner-wrap div p {
-  max-width: 100%;
-}
-
-@media (max-width: 900px) {
-  .layout--single .page__inner-wrap,
-  .layout--wide .page__inner-wrap {
-    grid-template-columns: 1fr !important;
-  }
-
-  #main {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+  max-width: 100% !important;
 }
 
 /* ================================= */
@@ -290,6 +239,7 @@ body,
 .page__content blockquote p,
 .page__inner-wrap blockquote p {
   margin: 0 !important;
+  max-width: 100% !important;
 }
 
 /* ================================= */
@@ -320,6 +270,9 @@ a:hover {
 .masthead__inner-wrap {
   padding-top: 14px !important;
   padding-bottom: 14px !important;
+  max-width: none !important;
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
 }
 
 .site-title,
@@ -412,7 +365,7 @@ code, pre {
 }
 
 /* ================================= */
-/* Selection highlight               */
+/* Selection                         */
 /* ================================= */
 
 ::selection {
@@ -427,9 +380,6 @@ code, pre {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
   gap: 28px;
   margin-top: 1.8rem;
   margin-bottom: 2.5rem;
@@ -461,6 +411,7 @@ code, pre {
   color: var(--ink-light) !important;
   line-height: 1.5 !important;
   font-style: normal !important;
+  max-width: 100% !important;
 }
 
 /* ================================= */
@@ -524,7 +475,7 @@ code, pre {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 1.5rem;
 }
@@ -565,16 +516,18 @@ code, pre {
 
 @media (max-width: 900px) {
 
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .education-grid,
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
   .career-intro {
     grid-template-columns: 1fr;
+  }
+
+  #main {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
   }
 
 }
