@@ -32,7 +32,7 @@
 }
 
 /* ================================= */
-/* Base — background & body          */
+/* Base                              */
 /* ================================= */
 
 html {
@@ -44,7 +44,6 @@ body {
   color: var(--ink) !important;
 }
 
-/* Subtle paper grain overlay */
 body::after {
   content: '';
   position: fixed;
@@ -59,11 +58,8 @@ body::after {
 /* ================================= */
 
 body,
-.page,
 .page__content,
-.page__inner-wrap,
-.layout--single,
-.layout--wide {
+.page__inner-wrap {
   font-family: var(--serif) !important;
 }
 
@@ -79,31 +75,19 @@ body,
 .page__inner-wrap h1,
 .page__inner-wrap h2,
 .page__inner-wrap h3,
-.page__inner-wrap h4,
-.layout--wide h1,
-.layout--wide h2,
-.layout--wide h3,
-.layout--wide h4 {
+.page__inner-wrap h4 {
   font-family: var(--display) !important;
   font-weight: 400 !important;
   color: var(--ink) !important;
 }
 
 .page__title {
-  font-size: 2.6rem !important;
+  font-size: 2.4rem !important;
   font-weight: 300 !important;
   letter-spacing: 0.02em !important;
   border-bottom: 1px solid var(--border) !important;
   padding-bottom: 14px !important;
-  margin-top: 0.5rem !important;
   margin-bottom: 1.4rem !important;
-}
-
-.page__content h1,
-.page__inner-wrap h1 {
-  font-size: 2.4rem !important;
-  font-weight: 300 !important;
-  border: none !important;
 }
 
 .page__content h2,
@@ -112,9 +96,8 @@ body,
   font-style: italic !important;
   border-bottom: 1px solid var(--border) !important;
   padding-bottom: 6px !important;
-  margin-top: 3rem !important;
+  margin-top: 2.5rem !important;
   margin-bottom: 1rem !important;
-  letter-spacing: 0.01em !important;
 }
 
 .page__content h3,
@@ -126,51 +109,36 @@ body,
   letter-spacing: 0.2em !important;
   text-transform: uppercase !important;
   color: var(--ink-light) !important;
-  margin-top: 2.2rem !important;
+  margin-top: 2rem !important;
   margin-bottom: 0.6rem !important;
 }
 
 /* ================================= */
-/* Layout — break MM's narrow box    */
+/* Layout — widen content area only  */
 /* ================================= */
 
-/* Remove every width cap MM applies */
-#main,
-.page,
-.page__inner-wrap,
-.page__content,
-.layout--single,
-.layout--wide,
-.layout--single .page,
-.layout--wide .page {
-  max-width: none !important;
+/* Widen MM's outer wrapper */
+.page__inner-wrap {
   width: 100% !important;
-  float: none !important;
+  max-width: 100% !important;
 }
 
-/* Side padding only on the outermost wrapper */
-#main {
-  padding-left: 4vw !important;
-  padding-right: 4vw !important;
-  padding-top: 2rem !important;
-  box-sizing: border-box !important;
-}
-
-.page {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
+/* Widen content column — don't touch the sidebar */
 .page__content {
-  line-height: 1.8;
+  width: 100% !important;
+  max-width: 100% !important;
   font-size: 17px;
+  line-height: 1.8;
   color: var(--ink);
 }
 
+/* Widen the overall #main container */
+#main {
+  max-width: 1400px !important;
+}
+
 @media (min-width: 1200px) {
-  .page__content {
-    font-size: 18px;
-  }
+  .page__content { font-size: 18px; }
 }
 
 /* ================================= */
@@ -181,12 +149,10 @@ body,
 .page__inner-wrap p {
   margin-bottom: 1.2rem;
   color: var(--ink);
-  max-width: 72ch;
 }
 
-/* Inside any grid/flex container let text fill the column */
-.page__content div p,
-.page__inner-wrap div p {
+/* Let paragraphs inside layout divs fill their column */
+.page__content div p {
   max-width: 100% !important;
 }
 
@@ -198,24 +164,16 @@ body,
 .page__inner-wrap hr {
   border: none !important;
   border-top: 1px solid var(--border) !important;
-  margin: 2.2rem 0 !important;
+  margin: 2rem 0 !important;
 }
 
 /* ================================= */
 /* Lists                             */
 /* ================================= */
 
-.page__content ul,
-.page__content ol,
-.page__inner-wrap ul,
-.page__inner-wrap ol {
-  margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
-}
-
 .page__content li,
 .page__inner-wrap li {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.4rem;
   color: var(--ink);
   line-height: 1.8;
 }
@@ -236,11 +194,7 @@ body,
   border-radius: 0 !important;
 }
 
-.page__content blockquote p,
-.page__inner-wrap blockquote p {
-  margin: 0 !important;
-  max-width: 100% !important;
-}
+.page__content blockquote p { margin: 0 !important; max-width: 100% !important; }
 
 /* ================================= */
 /* Links                             */
@@ -253,9 +207,7 @@ a {
   transition: border-color 0.2s !important;
 }
 
-a:hover {
-  border-bottom-color: var(--rust) !important;
-}
+a:hover { border-bottom-color: var(--rust) !important; }
 
 /* ================================= */
 /* Masthead / Nav                    */
@@ -267,44 +219,28 @@ a:hover {
   box-shadow: none !important;
 }
 
-.masthead__inner-wrap {
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
-  max-width: none !important;
-  padding-left: 4vw !important;
-  padding-right: 4vw !important;
-}
-
-.site-title,
-.masthead__menu a.site-title {
+.site-title {
   font-family: var(--serif) !important;
-  font-size: 1.15rem !important;
+  font-size: 1.1rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.06em !important;
   color: var(--ink) !important;
-  text-decoration: none !important;
   border-bottom: none !important;
 }
 
 .greedy-nav a {
   font-family: var(--mono) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.68rem !important;
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
   color: var(--ink-mid) !important;
-  text-decoration: none !important;
   border-bottom: none !important;
   transition: color 0.2s !important;
 }
 
-.greedy-nav a:hover {
-  color: var(--rust) !important;
-  border-bottom: none !important;
-}
+.greedy-nav a:hover { color: var(--rust) !important; }
 
-.greedy-nav .visible-links a::before {
-  background: var(--rust) !important;
-}
+.greedy-nav .visible-links a::before { background: var(--rust) !important; }
 
 /* ================================= */
 /* Author Sidebar                    */
@@ -312,21 +248,20 @@ a:hover {
 
 .sidebar .author__name {
   font-family: var(--display) !important;
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
   font-weight: 400 !important;
   color: var(--ink) !important;
 }
 
 .sidebar .author__bio {
   font-family: var(--mono) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.7rem !important;
   letter-spacing: 0.12em !important;
   color: var(--ink-light) !important;
   text-transform: uppercase !important;
 }
 
-.sidebar .author__location,
-.sidebar .author__links a {
+.sidebar .author__location {
   font-family: var(--mono) !important;
   font-size: 0.7rem !important;
   color: var(--ink-light) !important;
@@ -339,13 +274,12 @@ a:hover {
 .page__footer {
   background: var(--paper-alt) !important;
   border-top: 1px solid var(--border) !important;
-  color: var(--ink-light) !important;
 }
 
 .page__footer-follow,
 .page__footer-copyright {
   font-family: var(--mono) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.68rem !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
   color: var(--ink-light) !important;
@@ -368,10 +302,7 @@ code, pre {
 /* Selection                         */
 /* ================================= */
 
-::selection {
-  background: #f4c7b0;
-  color: var(--ink);
-}
+::selection { background: #f4c7b0; color: var(--ink); }
 
 /* ================================= */
 /* Gallery Grid                      */
@@ -379,21 +310,18 @@ code, pre {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 28px;
   margin-top: 1.8rem;
   margin-bottom: 2.5rem;
 }
 
-.gallery-item {
-  text-align: center;
-}
+.gallery-item { text-align: center; }
 
 .gallery-item img {
   width: 100%;
-  height: 320px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 0;
   filter: sepia(12%) contrast(0.95);
   transition: filter 0.3s, transform 0.3s;
 }
@@ -404,18 +332,17 @@ code, pre {
 }
 
 .gallery-item p {
-  margin-top: 0.7rem !important;
+  margin-top: 0.6rem !important;
   font-family: var(--mono) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.68rem !important;
   letter-spacing: 0.08em !important;
   color: var(--ink-light) !important;
-  line-height: 1.5 !important;
-  font-style: normal !important;
   max-width: 100% !important;
+  font-style: normal !important;
 }
 
 /* ================================= */
-/* Career Page                       */
+/* Career — intro grid               */
 /* ================================= */
 
 .career-intro {
@@ -423,14 +350,13 @@ code, pre {
   grid-template-columns: 2fr 1fr;
   gap: 40px;
   align-items: start;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .career-contact {
   background: var(--paper-alt);
   padding: 1.4rem;
   border: 1px solid var(--border);
-  border-radius: 0;
 }
 
 .career-contact h3 {
@@ -442,21 +368,21 @@ code, pre {
   margin-bottom: 10px !important;
 }
 
-/* Education */
+/* ================================= */
+/* Education grid                    */
+/* ================================= */
 
 .education-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 1.5rem;
+  gap: 28px;
+  margin-top: 1.2rem;
 }
 
 .education-item {
   background: var(--paper-alt);
-  padding: 1.6rem;
-  border: none;
+  padding: 1.4rem;
   border-left: 2px solid var(--rust);
-  border-radius: 0;
   font-size: 0.92rem;
   line-height: 1.8;
   color: var(--ink);
@@ -464,28 +390,28 @@ code, pre {
 
 .education-item strong {
   display: block;
-  margin-bottom: 0.6rem;
-  font-size: 1.0rem;
+  margin-bottom: 0.5rem;
   font-family: var(--display);
+  font-size: 1rem;
   font-weight: 500;
-  color: var(--ink);
 }
 
-/* Skills */
+/* ================================= */
+/* Skills grid                       */
+/* ================================= */
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 1.5rem;
+  gap: 20px;
+  margin-top: 1.2rem;
 }
 
 .skills-grid > div {
   background: var(--paper-alt);
-  padding: 1.4rem;
+  padding: 1.2rem;
   border: 1px solid var(--border);
-  border-radius: 0;
-  font-size: 0.88rem;
+  font-size: 0.87rem;
   line-height: 1.75;
   color: var(--ink-mid);
 }
@@ -493,21 +419,12 @@ code, pre {
 .skills-grid > div strong {
   display: block;
   font-family: var(--mono) !important;
-  font-size: 0.65rem !important;
+  font-size: 0.63rem !important;
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
   color: var(--rust) !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 7px !important;
   font-weight: 400 !important;
-}
-
-/* Project role line */
-
-.page__content h3 + p,
-.page__inner-wrap h3 + p {
-  font-weight: 400;
-  color: var(--ink-mid);
-  font-style: italic;
 }
 
 /* ================================= */
@@ -515,19 +432,7 @@ code, pre {
 /* ================================= */
 
 @media (max-width: 900px) {
-
   .education-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .career-intro {
-    grid-template-columns: 1fr;
-  }
-
-  #main {
-    padding-left: 5vw !important;
-    padding-right: 5vw !important;
-  }
-
+  .skills-grid { grid-template-columns: 1fr; }
+  .career-intro { grid-template-columns: 1fr; }
 }
