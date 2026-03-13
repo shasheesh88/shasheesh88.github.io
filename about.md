@@ -10,10 +10,15 @@ if(sessionStorage.getItem("auth") !== "yes"){
 }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+
 /* Force full width on wide layout */
 .layout--wide .page__content {
   max-width: 100% !important;
   width: 100% !important;
+  font-family: 'Lora', Georgia, serif;
+  color: #1c1917;
+  line-height: 1.85;
 }
 
 /* Two-column intro */
@@ -23,59 +28,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
   gap: 48px;
   align-items: start;
   margin-bottom: 40px;
-}
-
-/* Interests block */
-.interests-block {
-  background: #ede8df;
-  border: 1px solid #d6cfc4;
-  padding: 28px;
-}
-
-.interests-block ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.interests-block ul li {
-  padding: 7px 0 !important;
-  border-bottom: 1px solid #d6cfc4 !important;
-  font-style: italic !important;
-  margin: 0 !important;
-}
-
-.interests-block ul li:last-child {
-  border-bottom: none !important;
-}
-
-/* Image */
-.about-image img {
-  width: 100%;
-  display: block;
-  filter: sepia(12%) contrast(0.95);
-}
-
-/* Vision block */
-.vision-block {
-  border-left: 2px solid #d6cfc4;
-  padding: 4px 0 4px 20px;
-  margin: 16px 0;
-}
-
-.vision-block p {
-  margin: 0 0 10px 0 !important;
-}
-
-.vision-block p:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* Section divider */
-.about-divider {
-  border: none;
-  border-top: 1px solid #e5e0d8;
-  margin: 36px 0;
 }
 
 /* Section label */
@@ -90,6 +42,69 @@ if(sessionStorage.getItem("auth") !== "yes"){
   margin: 0 0 20px 0;
 }
 
+/* Interests block */
+.interests-block {
+  background: #ede8df;
+  border: 1px solid #d6cfc4;
+  padding: 28px;
+}
+.interests-block ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.interests-block ul li {
+  padding: 7px 0 !important;
+  border-bottom: 1px solid #d6cfc4 !important;
+  font-style: italic !important;
+  font-family: 'Lora', Georgia, serif !important;
+  margin: 0 !important;
+  color: #1c1917 !important;
+}
+.interests-block ul li:last-child {
+  border-bottom: none !important;
+}
+
+/* Image */
+.about-image img {
+  width: 100%;
+  display: block;
+  filter: sepia(12%) contrast(0.95);
+}
+
+/* Vision block — styled like index blockquote */
+.vision-block {
+  border-left: 2px solid #9a3412;
+  background: #fef3ee;
+  padding: 14px 22px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #44403c;
+  font-size: 1rem;
+  font-family: 'Lora', Georgia, serif;
+}
+.vision-block p {
+  margin: 0 0 10px 0 !important;
+}
+.vision-block p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Section divider */
+.about-divider {
+  border: none;
+  border-top: 1px solid #e5e0d8;
+  margin: 36px 0;
+}
+
+/* Body paragraphs */
+.layout--wide .page__content p {
+  font-family: 'Lora', Georgia, serif;
+  color: #1c1917;
+  line-height: 1.85;
+  font-size: 1rem;
+}
+
 @media (max-width: 800px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -100,7 +115,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
 <hr class="about-divider" style="margin-top:0;">
 
 <div class="about-grid">
-
   <div>
     <p class="section-label">Introduction</p>
     <p>Hello. I am Shasheesh.</p>
@@ -109,7 +123,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
     <p>I am deeply connected with my family, especially my father Venkanna and my grandmother Bharataamma. They have had a strong impact on my personality and who I am today. They are very important to me.</p>
     <p>I like fishing a lot. I like being in nature and staying close to it. I enjoy being surrounded by animals like buffaloes, cows, dogs, and others.</p>
   </div>
-
   <div>
     <p class="section-label">Interests</p>
     <div class="interests-block">
@@ -125,13 +138,11 @@ if(sessionStorage.getItem("auth") !== "yes"){
       <img src="/images/A_calm_countryside_river_at_sunset__A_person_sits_peacefully_on_the_grassy_bank__fishing_with_a_simp.png" alt="Fishing at sunset" />
     </div>
   </div>
-
 </div>
 
 <hr class="about-divider">
 
 <div class="about-grid">
-
   <div>
     <p class="section-label">Long-Term Vision</p>
     <div class="vision-block">
@@ -140,9 +151,7 @@ if(sessionStorage.getItem("auth") !== "yes"){
       <p>Spending quality time with my family.</p>
     </div>
   </div>
-
   <div>
     <!-- intentionally open — add a photo or quote here later -->
   </div>
-
 </div>
