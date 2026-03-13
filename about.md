@@ -1,4 +1,3 @@
-
 ---
 layout: wide
 title: "About Me"
