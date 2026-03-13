@@ -10,7 +10,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
 }
 </script>
 <style>
-/* Two-column section layout */
 .career-section-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,41 +19,38 @@ if(sessionStorage.getItem("auth") !== "yes"){
 }
 
 .col-label {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--mono);
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #78716c;
+  color: var(--ink-light);
   margin-bottom: 14px;
   display: block;
 }
 
-/* Project entries */
 .project-entry {
-  border-left: 2px solid #e5e0d8;
+  border-left: 2px solid var(--border);
   padding-left: 18px;
   margin-bottom: 32px;
+  transition: border-left-color 0.2s;
 }
-
-.project-entry:hover {
-  border-left-color: #9a3412;
-}
+.project-entry:hover { border-left-color: var(--rust); }
 
 .project-title {
-  font-family: 'Crimson Pro', Georgia, serif;
+  font-family: var(--display);
   font-style: italic;
   font-size: 1.15rem;
   font-weight: 400;
-  color: #1c1917;
+  color: var(--ink);
   margin: 0 0 4px 0;
 }
 
 .project-meta {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #9a3412;
+  color: var(--rust);
   margin-bottom: 12px;
   display: block;
 }
@@ -64,19 +60,16 @@ if(sessionStorage.getItem("auth") !== "yes"){
   padding: 0 !important;
   margin: 0 0 10px !important;
 }
-
 .project-entry ul li {
   padding: 5px 0 !important;
-  border-bottom: 1px solid #ede8df !important;
+  border-bottom: 1px solid var(--paper-alt) !important;
   font-size: 0.92rem !important;
-  color: #1c1917 !important;
   margin: 0 !important;
 }
-
 .project-entry ul li:last-child { border-bottom: none !important; }
 
 .insight-label {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--mono);
   font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -86,35 +79,30 @@ if(sessionStorage.getItem("auth") !== "yes"){
 }
 
 .placeholder {
-  font-family: 'DM Mono', monospace;
+  font-family: var(--mono);
   font-size: 0.7rem;
   color: #c8c1b8;
   font-style: italic;
 }
 
-/* Ruled lists */
 .ruled-list {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-
 .ruled-list li {
   padding: 6px 0 !important;
-  border-bottom: 1px solid #ede8df !important;
+  border-bottom: 1px solid var(--paper-alt) !important;
   font-size: 0.95rem !important;
-  color: #1c1917 !important;
   margin: 0 !important;
 }
-
 .ruled-list li:last-child { border-bottom: none !important; }
 
-/* Closing note */
 .closing-note {
   font-style: italic;
-  color: #78716c;
+  color: var(--ink-light);
   font-size: 0.93rem;
-  border-top: 1px solid #d6cfc4;
+  border-top: 1px solid var(--border);
   padding-top: 24px;
 }
 
@@ -124,30 +112,30 @@ if(sessionStorage.getItem("auth") !== "yes"){
 </style>
 
 <div class="career-intro">
-
   <div class="career-summary">
-    <h2>Professional Direction</h2>
-    <p>With a background in maths and analytics, and an interest in solving problems with data, I use data science, AI/ML, and cloud platforms to design and build scalable and ethical intelligent systems that create sustainable and meaningful impact.</p>
-    <p>I am drawn to problems that require both structured reasoning and creative thinking. What motivates me most is building systems that not only work technically, but also make real-world processes clearer, faster, and more meaningful.</p>
-    <p class="placeholder">[Write 2–4 sentences here later about why you chose this field.]</p>
-  </div>
 
+## Professional Direction
+
+With a background in maths and analytics, and an interest in solving problems with data, I use data science, AI/ML, and cloud platforms to design and build scalable and ethical intelligent systems that create sustainable and meaningful impact.
+
+I am drawn to problems that require both structured reasoning and creative thinking. What motivates me most is building systems that not only work technically, but also make real-world processes clearer, faster, and more meaningful.
+
+  </div>
   <div class="career-contact">
-    <h3>Contact</h3>
-    <p>
-      eshwaranchittaluri123@gmail.com<br>
-      shasheesh88@yahoo.com
-    </p>
-  </div>
 
+### Contact
+
+eshwaranchittaluri123@gmail.com  
+shasheesh88@yahoo.com
+
+  </div>
 </div>
 
-<hr>
+---
 
 ## Education
 
 <div class="education-grid">
-
   <div class="education-item">
     <strong>National Institute of Technology Karnataka (NITK), Surathkal</strong><br>
     MBA — Analytics & AI<br>
@@ -155,7 +143,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
     Grade: ≈ 8.5<br>
     2022–2024
   </div>
-
   <div class="education-item">
     <strong>Indian Institute of Science Education and Research (IISER), Trivandrum</strong><br>
     BS–MS — Computational Materials Science<br>
@@ -164,58 +151,48 @@ if(sessionStorage.getItem("auth") !== "yes"){
     Masters Grade: 8.10<br>
     2017–2022
   </div>
-
 </div>
 
-<hr>
+---
 
 ## Skills
 
 <div class="skills-grid">
-
   <div>
     <strong>Data Science Tools</strong><br>
     Pandas, NumPy, SciPy, TensorFlow, PyTorch, XGBoost, Keras, Scikit-Learn, Transformers, SpaCy, Hugging Face, Apache Airflow, MLflow, Scrapy, Requests, Missingno, PuLP, DateTime, Regex, Vertex AI ADK
   </div>
-
   <div>
     <strong>Machine Learning</strong><br>
     Machine Learning, Deep Learning, Supervised Learning, Optimization, Unsupervised Learning, NLP, Computer Vision, Generative AI, LLMs, Agent Frameworks, MLOps, Hyperparameter Tuning, RAG, RLHF
   </div>
-
   <div>
     <strong>Languages & Tools</strong><br>
     Python, SQL, Bash, gcloud CLI, MySQL, Windows, WSL
   </div>
-
   <div>
     <strong>Databases & Cloud</strong><br>
     PostgreSQL, MySQL, Data Warehousing, BigQuery, Cloud Run, Artifact Registry, Cloud Storage, Logging & Monitoring, Serverless Deployment, IAM Security, ETL/ELT Workflows, Data Interpretation, Cloud-agnostic architecture (GCP → AWS/Azure transferable)
   </div>
-
   <div>
     <strong>Visualization</strong><br>
     Tableau, Matplotlib, Seaborn
   </div>
-
   <div>
     <strong>Other Skills</strong><br>
     Alteryx Designer, HPC Clusters, MS Office Suite, Statistical Analysis, Problem Solving, Analytical Thinking, Data Storytelling
   </div>
-
   <div>
     <strong>Soft Skills</strong><br>
     Communication, Insight Synthesis, Collaboration, Presentation Skills
   </div>
-
 </div>
 
-<hr>
+---
 
 ## Work Experience & Projects
 
 <div class="career-section-grid">
-
   <div>
 
     <div class="project-entry">
@@ -255,7 +232,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
     </div>
 
   </div>
-
   <div>
 
     <div class="project-entry">
@@ -294,13 +270,11 @@ if(sessionStorage.getItem("auth") !== "yes"){
     </div>
 
   </div>
-
 </div>
 
-<hr>
+---
 
 <div class="career-section-grid">
-
   <div>
     <span class="col-label">Achievements</span>
     <ul class="ruled-list">
@@ -308,10 +282,9 @@ if(sessionStorage.getItem("auth") !== "yes"){
       <li>Certificate of Extracurricular Excellence in Badminton from Dean of Students' Welfare</li>
     </ul>
   </div>
-
   <div>
     <span class="col-label">Current Focus</span>
-    <p style="font-size:0.9rem; color:#78716c; font-style:italic; margin-bottom:10px;">Right now I am focused on:</p>
+    <p style="font-size:0.9rem; color:var(--ink-light); font-style:italic; margin-bottom:10px;">Right now I am focused on:</p>
     <ul class="ruled-list">
       <li>Strengthening real-world AI system deployment skills</li>
       <li>Improving model interpretability and reliability</li>
@@ -319,11 +292,10 @@ if(sessionStorage.getItem("auth") !== "yes"){
       <li>Deepening mathematical intuition behind ML systems</li>
     </ul>
   </div>
-
 </div>
 
-<hr>
+---
 
-<p style="font-size:0.97rem; color:#1c1917; max-width:60ch;">I aim to work on systems that combine strong math foundations, responsible AI practices, and practical deployment — systems that are not only intelligent, but useful, trustworthy, and scalable.</p>
+<p style="font-size:0.97rem; color:var(--ink); max-width:60ch;">I aim to work on systems that combine strong math foundations, responsible AI practices, and practical deployment — systems that are not only intelligent, but useful, trustworthy, and scalable.</p>
 
 <p class="closing-note">This page is not a static résumé. It is a record of how my skills, thinking, and direction evolve over time.</p>
