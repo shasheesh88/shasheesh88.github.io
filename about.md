@@ -44,9 +44,9 @@ if(sessionStorage.getItem("auth") !== "yes"){
 
 /* Interests block */
 .interests-block {
-  background: #ede8df;
-  border: 1px solid #d6cfc4;
-  padding: 28px;
+  background: #ede8df !important;
+  border: 1px solid #d6cfc4 !important;
+  padding: 28px !important;
 }
 .interests-block ul {
   list-style: none !important;
