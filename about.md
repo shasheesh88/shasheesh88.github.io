@@ -10,18 +10,8 @@ if(sessionStorage.getItem("auth") !== "yes"){
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+/* Layout only — typography comes from main.scss */
 
-/* Force full width on wide layout */
-.layout--wide .page__content {
-  max-width: 100% !important;
-  width: 100% !important;
-  font-family: 'Lora', Georgia, serif;
-  color: #1c1917;
-  line-height: 1.85;
-}
-
-/* Two-column intro */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,22 +20,20 @@ if(sessionStorage.getItem("auth") !== "yes"){
   margin-bottom: 40px;
 }
 
-/* Section label */
 .section-label {
-  font-family: 'Crimson Pro', Georgia, serif;
+  font-family: var(--display);
   font-style: italic;
   font-size: 1.45rem;
   font-weight: 400;
-  color: #1c1917;
-  border-bottom: 1px solid #d6cfc4;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
   margin: 0 0 20px 0;
 }
 
-/* Interests block */
 .interests-block {
-  background: #ede8df !important;
-  border: 1px solid #d6cfc4 !important;
+  background: var(--paper-alt) !important;
+  border: 1px solid var(--border) !important;
   padding: 28px !important;
 }
 .interests-block ul {
@@ -55,33 +43,28 @@ if(sessionStorage.getItem("auth") !== "yes"){
 }
 .interests-block ul li {
   padding: 7px 0 !important;
-  border-bottom: 1px solid #d6cfc4 !important;
+  border-bottom: 1px solid var(--border) !important;
   font-style: italic !important;
-  font-family: 'Lora', Georgia, serif !important;
   margin: 0 !important;
-  color: #1c1917 !important;
 }
 .interests-block ul li:last-child {
   border-bottom: none !important;
 }
 
-/* Image */
 .about-image img {
   width: 100%;
   display: block;
   filter: sepia(12%) contrast(0.95);
 }
 
-/* Vision block — styled like index blockquote */
 .vision-block {
-  border-left: 2px solid #9a3412;
-  background: #fef3ee;
+  border-left: 2px solid var(--rust);
+  background: var(--rust-faint);
   padding: 14px 22px;
   margin: 16px 0;
   font-style: italic;
-  color: #44403c;
+  color: var(--ink-mid);
   font-size: 1rem;
-  font-family: 'Lora', Georgia, serif;
 }
 .vision-block p {
   margin: 0 0 10px 0 !important;
@@ -90,25 +73,14 @@ if(sessionStorage.getItem("auth") !== "yes"){
   margin-bottom: 0 !important;
 }
 
-/* Section divider */
 .about-divider {
   border: none;
-  border-top: 1px solid #e5e0d8;
+  border-top: 1px solid var(--border);
   margin: 36px 0;
 }
 
-/* Body paragraphs */
-.layout--wide .page__content p {
-  font-family: 'Lora', Georgia, serif;
-  color: #1c1917;
-  line-height: 1.85;
-  font-size: 1rem;
-}
-
 @media (max-width: 800px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+  .about-grid { grid-template-columns: 1fr; }
 }
 </style>
 
