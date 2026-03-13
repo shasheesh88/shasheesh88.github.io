@@ -1,6 +1,7 @@
+navigation:
 main:
   - title: "About"
-    url: /
+    url: /about/   # ← change this from /
   - title: "Career"
     url: /career/
   - title: "Philosophy"
