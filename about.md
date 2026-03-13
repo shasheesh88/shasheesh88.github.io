@@ -79,8 +79,44 @@ if(sessionStorage.getItem("auth") !== "yes"){
   margin: 36px 0;
 }
 
+/* Interests media grid */
+.interests-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 12px;
+}
+
+.interest-card {
+  border: 1px solid var(--border);
+  background: var(--paper-alt);
+  overflow: hidden;
+}
+
+.interest-card img {
+  width: 100%;
+  display: block;
+  filter: sepia(12%) contrast(0.95);
+}
+
+.interest-card video {
+  width: 100%;
+  display: block;
+}
+
+.interest-card-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  padding: 10px 14px;
+  display: block;
+}
+
 @media (max-width: 800px) {
   .about-grid { grid-template-columns: 1fr; }
+  .interests-media { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -106,10 +142,55 @@ if(sessionStorage.getItem("auth") !== "yes"){
         <li>Sarcastic conversations with friends</li>
       </ul>
     </div>
-    <div class="about-image" style="margin-top:20px;">
-      <img src="/images/A_calm_countryside_river_at_sunset__A_person_sits_peacefully_on_the_grassy_bank__fishing_with_a_simp.png" alt="Fishing at sunset" />
-    </div>
   </div>
+</div>
+
+<hr class="about-divider">
+
+<p class="section-label">Interests in Focus</p>
+
+<div class="interests-media">
+
+  <div class="interest-card">
+    <img src="/images/fishing.jpg" alt="Fishing" />
+    <video controls>
+      <source src="/images/fishing.mp4" type="video/mp4">
+    </video>
+    <span class="interest-card-label">Fishing</span>
+  </div>
+
+  <div class="interest-card">
+    <img src="/images/technology.jpg" alt="Technology" />
+    <video controls>
+      <source src="/images/technology.mp4" type="video/mp4">
+    </video>
+    <span class="interest-card-label">Technology</span>
+  </div>
+
+  <div class="interest-card">
+    <img src="/images/nature.jpg" alt="Nature and animals" />
+    <video controls>
+      <source src="/images/nature.mp4" type="video/mp4">
+    </video>
+    <span class="interest-card-label">Nature & Animals</span>
+  </div>
+
+  <div class="interest-card">
+    <img src="/images/badminton.jpg" alt="Badminton" />
+    <video controls>
+      <source src="/images/badminton.mp4" type="video/mp4">
+    </video>
+    <span class="interest-card-label">Badminton</span>
+  </div>
+
+  <div class="interest-card">
+    <img src="/images/friends.jpg" alt="Friends" />
+    <video controls>
+      <source src="/images/friends.mp4" type="video/mp4">
+    </video>
+    <span class="interest-card-label">Sarcastic Conversations</span>
+  </div>
+
 </div>
 
 <hr class="about-divider">
