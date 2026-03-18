@@ -287,7 +287,7 @@ if(sessionStorage.getItem("auth") !== "yes"){
     <!-- 4. Shashi Badminton — Civil -->
     <div class="video-card">
       <video id="vid-shashi-civi" preload="metadata">
-        <source src="{{ '/images/shashi_civi.mp4' | relative_url }}" type="video/mp4">
+        <source src="{{ '/images/VID-20240107-WA0064.mp4' | relative_url }}" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
       <div class="video-info">
