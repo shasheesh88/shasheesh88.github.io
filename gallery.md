@@ -25,8 +25,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
-  display: flex;
-  flex-direction: column;
 }
 
 .gallery-item:hover {
@@ -35,26 +33,17 @@ if(sessionStorage.getItem("auth") !== "yes"){
 
 .gallery-item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 220px;
   object-fit: cover;
-  object-position: center top;
   display: block;
 }
 
 .gallery-item p {
-  padding: 14px 16px;
+  padding: 12px 14px;
   margin: 0;
   font-size: 0.88rem;
   color: #ccc;
-  line-height: 1.6;
-  background: #1a1a2e;
-}
-
-/* ── REDUCE SIDE MARGINS ── */
-.gallery-grid,
-.video-section {
-  margin-left: -12px;
-  margin-right: -12px;
+  line-height: 1.5;
 }
 
 /* ── VIDEO SECTION ── */
@@ -87,8 +76,8 @@ if(sessionStorage.getItem("auth") !== "yes"){
   width: 100%;
   display: block;
   background: #000;
-  max-height: 300px;
-  object-fit: contain;
+  max-height: 220px;
+  object-fit: cover;
 }
 
 .video-info {
@@ -118,10 +107,10 @@ if(sessionStorage.getItem("auth") !== "yes"){
   font-weight: 600;
   color: #fff;
 }
-.badge-my-video    { background: #2e4ccc; }
-.badge-animation   { background: #7c3aed; }
+.badge-my-video   { background: #2e4ccc; }
+.badge-animation  { background: #7c3aed; }
 .badge-documentary { background: #0f7a55; }
-.badge-film        { background: #b45309; }
+.badge-film       { background: #b45309; }
 
 /* ── VIDEO CONTROLS ── */
 .video-controls {
@@ -212,16 +201,6 @@ if(sessionStorage.getItem("auth") !== "yes"){
     <p>Stay present. Focus on what can be controlled. Think clearly.</p>
   </div>
 
-  <div class="gallery-item">
-    <img src="{{ '/images/shashi_independence_day.jpg' | relative_url }}" alt="Independence Day">
-    <p>Standing proud on Independence Day — a moment of patriotism, unity, and remembrance of those who gave us freedom.</p>
-  </div>
-
-  <div class="gallery-item">
-    <img src="{{ '/images/volleyball_team_2022.jpg' | relative_url }}" alt="Volleyball Team 2022">
-    <p>On the court with the crew — friendships built through sweat, teamwork, and the love of the game. 🏐</p>
-  </div>
-
 </div>
 
 <!-- ════════════════════════════════
@@ -308,7 +287,7 @@ if(sessionStorage.getItem("auth") !== "yes"){
     <!-- 4. Shashi Badminton — Civil -->
     <div class="video-card">
       <video id="vid-shashi-civi" preload="metadata">
-        <source src="{{ '/images/VID-20240107-WA0064.mp4' | relative_url }}" type="video/mp4">
+        <source src="{{ '/images/shashi_civi.mp4' | relative_url }}" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
       <div class="video-info">
