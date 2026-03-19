@@ -120,37 +120,37 @@ if(sessionStorage.getItem("auth") !== "yes"){
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  min-width: 200px;
+  gap: 12px;
+  min-width: 220px;
 }
 
 .career-contact h3 {
-  align-self: flex-start;
-  margin: 0 0 4px 0;
+  display: none;
 }
 
 .career-contact p {
   align-self: flex-start;
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   color: var(--ink-light);
   line-height: 1.8;
 }
 
 .profile-images {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  gap: 10px;
   width: 100%;
-  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 .profile-images img {
-  width: 100%;
-  max-width: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -193,7 +193,7 @@ if(sessionStorage.getItem("auth") !== "yes"){
   .career-section-grid { grid-template-columns: 1fr; }
   .career-intro        { grid-template-columns: 1fr; }
   .research-images     { grid-template-columns: 1fr; }
-  .profile-images img  { max-width: 100%; }
+  .profile-images img  { width: 90px; height: 90px; }
 }
 </style>
 
@@ -209,18 +209,16 @@ I am drawn to problems that require both structured reasoning and creative think
   </div>
   <div class="career-contact">
 
-### Contact
-
-<p>
-  shasheesh88@gmail.com<br>
-  shasheesh88@yahoo.com<br>
-  +91 91827 9627X
-</p>
-
 <div class="profile-images">
   <img src="{{ '/images/shashi_passport_size.png' | relative_url }}" alt="Shashi — Passport Photo">
   <img src="{{ '/images/shashi_screenshot_2.png' | relative_url }}" alt="Shashi">
 </div>
+
+<p>
+  eshwaranchittaluri123@gmail.com<br>
+  shasheesh88@yahoo.com<br>
+  +91 91829 38074
+</p>
 
   </div>
 </div>
