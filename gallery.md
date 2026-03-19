@@ -12,12 +12,11 @@ if(sessionStorage.getItem("auth") !== "yes"){
 
 <style>
 /* ── PHOTO GRID ── */
-.gallery-item img {
-  width: 100%;
-  height: 320px;        /* increased from 220px */
-  object-fit: cover;
-  object-position: center top;   /* shows faces/top portion better */
-  display: block;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
 }
 
 .gallery-item {
@@ -26,6 +25,8 @@ if(sessionStorage.getItem("auth") !== "yes"){
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery-item:hover {
@@ -34,17 +35,26 @@ if(sessionStorage.getItem("auth") !== "yes"){
 
 .gallery-item img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
 .gallery-item p {
-  padding: 12px 14px;
+  padding: 14px 16px;
   margin: 0;
   font-size: 0.88rem;
   color: #ccc;
-  line-height: 1.5;
+  line-height: 1.6;
+  background: #1a1a2e;
+}
+
+/* ── REDUCE SIDE MARGINS ── */
+.gallery-grid,
+.video-section {
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 /* ── VIDEO SECTION ── */
@@ -73,13 +83,12 @@ if(sessionStorage.getItem("auth") !== "yes"){
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* ── VIDEO SECTION ── */
 .video-card video {
   width: 100%;
   display: block;
   background: #000;
-  max-height: 300px;    /* increased from 220px */
-  object-fit: contain;  /* changed from cover — shows full video without cropping */
+  max-height: 300px;
+  object-fit: contain;
 }
 
 .video-info {
@@ -109,10 +118,10 @@ if(sessionStorage.getItem("auth") !== "yes"){
   font-weight: 600;
   color: #fff;
 }
-.badge-my-video   { background: #2e4ccc; }
-.badge-animation  { background: #7c3aed; }
+.badge-my-video    { background: #2e4ccc; }
+.badge-animation   { background: #7c3aed; }
 .badge-documentary { background: #0f7a55; }
-.badge-film       { background: #b45309; }
+.badge-film        { background: #b45309; }
 
 /* ── VIDEO CONTROLS ── */
 .video-controls {
@@ -202,6 +211,7 @@ if(sessionStorage.getItem("auth") !== "yes"){
     <img src="{{ '/images/mindful.jpeg' | relative_url }}" alt="Mindfulness Reminder">
     <p>Stay present. Focus on what can be controlled. Think clearly.</p>
   </div>
+
   <div class="gallery-item">
     <img src="{{ '/images/shashi_independence_day.jpg' | relative_url }}" alt="Independence Day">
     <p>Standing proud on Independence Day — a moment of patriotism, unity, and remembrance of those who gave us freedom.</p>
