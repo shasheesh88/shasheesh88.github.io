@@ -106,8 +106,94 @@ if(sessionStorage.getItem("auth") !== "yes"){
   padding-top: 24px;
 }
 
+/* ── CAREER INTRO ── */
+.career-intro {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+/* ── CONTACT + PROFILE IMAGES ── */
+.career-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 200px;
+}
+
+.career-contact h3 {
+  align-self: flex-start;
+  margin: 0 0 4px 0;
+}
+
+.career-contact p {
+  align-self: flex-start;
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+}
+
+.profile-images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.profile-images img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  object-fit: cover;
+  display: block;
+}
+
+/* ── RESEARCH IMAGES ── */
+.research-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0 10px;
+}
+
+.research-img-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--paper-alt);
+}
+
+.research-img-card img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  max-height: 200px;
+  background: #fff;
+  padding: 8px;
+}
+
+.research-img-caption {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  padding: 8px 10px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .career-section-grid { grid-template-columns: 1fr; }
+  .career-intro        { grid-template-columns: 1fr; }
+  .research-images     { grid-template-columns: 1fr; }
+  .profile-images img  { max-width: 100%; }
 }
 </style>
 
@@ -125,8 +211,16 @@ I am drawn to problems that require both structured reasoning and creative think
 
 ### Contact
 
-eshwaranchittaluri123@gmail.com  
-shasheesh88@yahoo.com
+<p>
+  shasheesh88@gmail.com<br>
+  shasheesh88@yahoo.com<br>
+  +91 91827 9627X
+</p>
+
+<div class="profile-images">
+  <img src="{{ '/images/shashi_passport_size.png' | relative_url }}" alt="Shashi — Passport Photo">
+  <img src="{{ '/images/shashi_screenshot_2.png' | relative_url }}" alt="Shashi">
+</div>
 
   </div>
 </div>
@@ -252,6 +346,18 @@ shasheesh88@yahoo.com
       <span class="project-meta">2021–2022</span>
       <p>Studied effects of Ni concentration on formation mechanisms and structure of cathode-electrolyte interfaces in LiNixCoyMn1−x−yO2 materials.</p>
       <p>Applied Monte Carlo simulations and density functional calculations for mechanism analysis.</p>
+
+      <div class="research-images">
+        <div class="research-img-card">
+          <img src="{{ '/images/quantum_mechanis.png' | relative_url }}" alt="Schrödinger Wave Equation">
+          <div class="research-img-caption">Schrödinger Wave Equation — Quantum Mechanical Basis</div>
+        </div>
+        <div class="research-img-card">
+          <img src="{{ '/images/metropolis.png' | relative_url }}" alt="Metropolis Algorithm — Monte Carlo">
+          <div class="research-img-caption">Metropolis Criterion — MC Accept / Reject</div>
+        </div>
+      </div>
+
       <span class="insight-label">Insight gained</span>
       <p class="placeholder">[What research taught you about thinking or problem solving.]</p>
     </div>
