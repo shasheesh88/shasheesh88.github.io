@@ -200,6 +200,15 @@ if(sessionStorage.getItem("auth") !== "yes"){
     <img src="{{ '/images/mindful.jpeg' | relative_url }}" alt="Mindfulness Reminder">
     <p>Stay present. Focus on what can be controlled. Think clearly.</p>
   </div>
+    <div class="gallery-item">
+    <img src="{{ '/images/shashi_independence_day.jpg' | relative_url }}" alt="Independence Day">
+    <p>Standing proud on Independence Day — a moment of patriotism, unity, and remembrance of those who gave us freedom.</p>
+  </div>
+
+  <div class="gallery-item">
+    <img src="{{ '/images/volleyball_team_2022.jpg' | relative_url }}" alt="Volleyball Team 2022">
+    <p>On the court with the crew — friendships built through sweat, teamwork, and the love of the game. 🏐</p>
+  </div>
 
 </div>
 
