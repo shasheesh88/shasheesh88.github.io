@@ -215,9 +215,9 @@ I am drawn to problems that require both structured reasoning and creative think
 </div>
 
 <p>
-  eshwaranchittaluri123@gmail.com<br>
+  shasheesh11@gmail.com<br>
   shasheesh88@yahoo.com<br>
-  +91 91829 38074
+  +91 91827 9627X
 </p>
 
   </div>
