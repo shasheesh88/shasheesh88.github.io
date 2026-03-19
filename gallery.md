@@ -12,11 +12,12 @@ if(sessionStorage.getItem("auth") !== "yes"){
 
 <style>
 /* ── PHOTO GRID ── */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-  padding: 20px 0;
+.gallery-item img {
+  width: 100%;
+  height: 320px;        /* increased from 220px */
+  object-fit: cover;
+  object-position: center top;   /* shows faces/top portion better */
+  display: block;
 }
 
 .gallery-item {
@@ -72,12 +73,13 @@ if(sessionStorage.getItem("auth") !== "yes"){
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
+/* ── VIDEO SECTION ── */
 .video-card video {
   width: 100%;
   display: block;
   background: #000;
-  max-height: 220px;
-  object-fit: cover;
+  max-height: 300px;    /* increased from 220px */
+  object-fit: contain;  /* changed from cover — shows full video without cropping */
 }
 
 .video-info {
