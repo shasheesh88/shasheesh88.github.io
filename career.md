@@ -211,7 +211,7 @@ I am drawn to problems that require both structured reasoning and creative think
 
 <div class="profile-images">
   <img src="{{ '/images/shashi_passport_size.png' | relative_url }}" alt="Shashi — Passport Photo">
-  <img src="{{ '/images/shashi_screenshot_2.png' | relative_url }}" alt="Shashi">
+  <img src="{{ '/images/shashi_screenshot_2_v.png' | relative_url }}" alt="Shashi">
 </div>
 
 <p>
